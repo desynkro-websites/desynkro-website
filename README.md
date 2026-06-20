@@ -25,14 +25,14 @@ Open [http://localhost:8081](http://localhost:8081)
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/home_1.webp" width="32%" alt="Home page hero section">
-  <img src="screenshots/home_2.webp" width="32%" alt="Home page about carousel">
-  <img src="screenshots/home_3.webp" width="32%" alt="Home page contact and footer">
+  <a href="screenshots/home_1.webp" target="_blank"><img src="screenshots/home_1.webp" width="32%" alt="Home page hero section"></a>
+  <a href="screenshots/home_2.webp" target="_blank"><img src="screenshots/home_2.webp" width="32%" alt="Home page about carousel"></a>
+  <a href="screenshots/home_3.webp" target="_blank"><img src="screenshots/home_3.webp" width="32%" alt="Home page contact and footer"></a>
 </p>
 <p align="center">
-  <img src="screenshots/portfolio_1.webp" width="32%" alt="Portfolio showcase grid">
-  <img src="screenshots/portfolio_2.webp" width="32%" alt="Portfolio category browsing">
-  <img src="screenshots/portfolio_3.webp" width="32%" alt="Portfolio coding projects">
+  <a href="screenshots/portfolio_1.webp" target="_blank"><img src="screenshots/portfolio_1.webp" width="32%" alt="Portfolio showcase grid"></a>
+  <a href="screenshots/portfolio_2.webp" target="_blank"><img src="screenshots/portfolio_2.webp" width="32%" alt="Portfolio category browsing"></a>
+  <a href="screenshots/portfolio_3.webp" target="_blank"><img src="screenshots/portfolio_3.webp" width="32%" alt="Portfolio coding projects"></a>
 </p>
 
 ## Structure
