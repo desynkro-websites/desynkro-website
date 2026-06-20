@@ -2063,9 +2063,6 @@
       border-radius: 50%;
       display: inline-block;
     }
-    .pf-coding-stars {
-      color: rgba(255,255,255,0.4);
-    }
     .pf-loading {
       grid-column: 1 / -1;
       text-align: center;

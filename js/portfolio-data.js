@@ -377,18 +377,16 @@ const portfolioData = [
     thumb: '/portfolio/projects/project_thumbnail.webp',
     items: [
       {
-        name: 'discord-notification-scheduler',
-        desc: 'Schedule and manage Discord notifications with ease.',
-        lang: 'JavaScript',
-        stars: 0,
-        url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
+        name: 'desynkro-website',
+        desc: 'Personal portfolio website: photography, videos, web development, and open-source projects.',
+        lang: 'HTML',
+        url: 'https://codeberg.org/DeSynkro/desynkro-website'
       },
       {
-        name: 'exeldro-website',
-        desc: 'Personal website for Exeldro, a clean and modern web presence.',
-        lang: 'HTML',
-        stars: 0,
-        url: 'https://codeberg.org/DeSynkro/exeldro-website'
+        name: 'discord-notification-scheduler',
+        desc: 'Schedule and manage Discord notifications with ease.',
+        lang: 'Python',
+        url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
       }
     ]
   }

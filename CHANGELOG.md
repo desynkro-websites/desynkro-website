@@ -1,5 +1,11 @@
 # Changelog
 
+## v20260620.2
+- Added desynkro-website to Coding portfolio category
+- Removed exeldro-website from Coding portfolio category
+- Removed hardcoded star counts from coding project cards (no live API)
+- Fixed discord-notification-scheduler language to Python
+
 ## v20260620.1
 - Renamed internal `codeberg` references to `coding` across portfolio-data.js, portfolio.html, and styles.css for consistency with the Coding category title
 - Added cache-busting query parameter (`v=20260620.1`) to CSS links in both HTML files
