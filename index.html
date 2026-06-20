@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <title>DeSynkro — Linux Gamer, Photographer & Web Developer</title>
+  <meta name="description" content="DeSynkro — jack of all trades, master of some. Linux gamer, photographer, web developer, video editor, and former content creator.">
+  <meta property="og:title" content="DeSynkro — Linux Gamer, Photographer & Web Developer">
+  <meta property="og:description" content="Jack of all trades, master of some. Linux gaming, photography, web development, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://desynkro.com">
+  <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DeSynkro — Linux Gamer, Photographer & Web Developer">
+  <meta name="twitter:description" content="Jack of all trades, master of some. Linux gaming, photography, web development, and more.">
+  <link rel="canonical" href="https://desynkro.com">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logos/favicon-16.png">
+  
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════ HEADER / NAV ═══════════════ -->
+  <header>
+    <a href="/"><img src="/images/logos/header_logo.png" alt="desynkro" class="header-logo"></a>
+    <nav class="nav">
+      <a href="/" class="nav-active">HOME</a>
+      <a href="/portfolio">PORTFOLIO</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)">SOCIALS <svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="dropdown-menu">
+          <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+          <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer">TWITCH</a>
+          <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer">TWITTER</a>
+          <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer">DISCORD</a>
+      </div>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="/" class="mobile-link mobile-active">HOME</a>
+  <a href="/portfolio" class="mobile-link">PORTFOLIO</a>
+  <div class="mobile-socials">
+    <span class="mobile-socials-label">SOCIALS</span>
+    <div class="mobile-social-icons">
+      <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi yt">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi tw">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.089 0L.525 4.175v16.694h5.736V24h3.132l3.127-3.132h4.695l6.26-6.258V0H2.089zm18.763 13.553l-3.652 3.651H12l-3.127 3.132v-3.132H4.473V2.089h16.379v11.464zM14.39 6.188v5.736H12V6.188h2.39zm-5.212 0v5.736H6.789V6.188h2.389z"/></svg>
+      </a>
+      <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi xx">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer" class="msi dc">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- ═══════════════ HERO SECTION ═══════════════ -->
+  <main>
+  <section class="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <picture>
+        <source srcset="/images/hero/pfp.webp" type="image/webp">
+        <img src="/images/hero/pfp.jpg" alt="DeSynkro profile picture" class="hero-pfp">
+      </picture>
+      <h1 class="hero-title">DESYNKRO</h1>
+      <div class="hero-sub">JACK OF ALL TRADES, MASTER OF SOME</div>
+      <div class="hero-tagline">
+        <span class="tag-segment">PHOTOGRAPHER <span class="emoji">📷</span></span>
+        <span class="tag-sep"> • </span>
+        <span class="tag-segment">WEB DEVELOPER <span class="emoji">🌐</span></span>
+        <span class="tag-sep"> • </span>
+        <span class="tag-segment">FORMER CREATOR <span class="emoji">🎥</span></span>
+        <span class="tag-sep"> • </span>
+        <span class="tag-segment">LINUX ADVOCATE <span class="emoji">🐧</span></span>
+      </div>
+      </div>
+    <div class="hero-chevron" id="heroChevron">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FIND OUT MORE CAROUSEL ═══════════════ -->
+  <section class="carousel-section">
+    <div class="section-label">━ FIND OUT MORE ━</div>
+    <div class="carousel-wrapper" id="carousel">
+      <div class="carousel-card">
+        <div class="card-number">01 / 04</div>
+        <div class="card-title">
+          <div class="about-title-wrap">
+            <span class="about-title-swap" id="titlePrimary">ABOUT ME</span>
+            <span class="about-title-swap about-title-alt" id="titleSecondary">GET TO KNOW ME</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="about-text-wrap">
+            <div class="about-text-inner" id="aboutPrimary">
+              <p>Hey, I'm <strong>DeSynkro</strong>! Jack of all trades and Linux gamer running CachyOS (Arch btw).</p>
+              <p>I build websites, shoot and edit photos, edit videos, and occasionally pretend I know what I'm doing in cybersecurity. I'm deep in the Linux rabbit hole, self-hosting, tinkering, and pushing what open-source can do.</p>
+              <p>I used to stream Just Chatting on Twitch and made tutorials on YouTube teaching others the same. These days I help people switch to Linux and get as much of their games and software running as possible.</p>
+              <p>In my free time, you'll find me gaming, achievement hunting, or learning different Linux distros.</p>
+              <p>If you'd like to work together on a project, collaborate, or hire me for any of my services, don't hesitate to <a href="#" class="about-reach-out">reach out</a>!</p>
+            </div>
+            <div class="about-text-inner about-text-alt" id="aboutSecondary">
+              <p>Hey there, I'm Iago Rosa 👋</p>
+              <p>I was born and raised in Brazil and moved to Perth, Australia with my family in 2006 and have proudly called this country my home ever since.</p>
+              <p>I've always been a massive tech and gaming nerd 🎮 My all-time favourite game is <em>The Elder Scrolls V: Skyrim</em> (or as the internet memes it, "Mod it until it crashes"). I love modding games and achievement hunting. Right now I'm on a mission to finish the entire Yakuza series. I used to play a lot of FPS and used to play CSGO competitively, but these days I'm more into fun single-player and co-op games I can enjoy with friends. Feel free to add me on <a href="https://steamcommunity.com/id/desynkro" target="_blank" rel="noopener noreferrer">STEAM</a> if you want to game together!</p>
+              <p>In 2020 I gave streaming and content creation a try and managed to turn it into a career. After a year of consistent grinding I became a Twitch Partner. During that time I met the love of my life, and after Covid I flew out to the Philippines to be with her. We're happily married now.</p>
+              <p>I'm also really into photography 📷, especially portraits, I love taking photos of people, and automotive shots. My favorite cars are the Nissan Skyline R34 and the Mazda RX-7.</p>
+              <p>At home I've got my little puppy Luna (a Maltese Shih Tzu) 🐶 No matter how old she gets, she'll always be a puppy to me, you'll definitely spot her in the portfolio!</p>
+              <p>I'm a strong privacy advocate 🔒, I believe mandatory ID verification online creates more problems than it solves, especially with how common data breaches and leaks are. That passion led me down the rabbit hole of cybersecurity, self-hosting, open source software, and Linux.</p>
+              <p>In late 2023, Microslop's awful business practices finally pushed me over the edge. I started with Linux Mint, fell in love with the whole ecosystem, and by 2025 I had fully migrated to CachyOS (arch btw). All my systems are now running Linux.</p>
+              <p>These days I work as a tradie. With the rise of AI making me fear about the long-term future of my tech and photography work, I wanted something more "AI-resistant", plus the constant movement keeps me fit, which I love. I'm big into gym sessions and nutrition too.</p>
+              <p>I'm just a chill guy who enjoys life, good games, and learning new things. Thanks for stopping by, I hope you enjoy your stay!</p>
+            </div>
+          </div>
+          <button class="about-toggle" id="aboutToggle">READ MORE →</button>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <div class="card-number">02 / 04</div>
+        <div class="card-title">SERVICES</div>
+        <div class="card-body">
+          <p><strong>📸 Photography & Videography</strong> — from portraits and pets to automotive and events, capturing and editing content using professional-grade tools for polished, high-quality results.</p>
+          <p><strong>🎞️ Video Editing</strong> — post-production across DaVinci Resolve, Adobe Premiere, After Effects, and KDENLive. Experienced in colour grading, transitions, and crafting a polished final cut.</p>
+          <p><strong>🌐 Web Development & Design</strong> — building clean, responsive websites for businesses and portfolios. Custom-coded with a focus on performance, simplicity, and modern design.</p>
+          <p><strong>🎥 Content Creation</strong> — formerly streaming Just Chatting with live on-stream effects, often compared to a produced YouTube video. Later expanded into tutorials, product reviews, and gym content.</p>
+          <p><strong>🐧 Linux Advocacy</strong> — helping people switch to Linux and get the most out of it. From setting up dual boots to full migrations, providing ongoing support for compatibility and parity with existing workflows.</p>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <div class="card-number">03 / 04</div>
+        <div class="card-title">CONTACT</div>
+        <div class="card-body">
+          <p>Thanks for reaching out! Get in touch below and I'll get back to you as soon as possible.</p>
+
+          <p class="contact-row"><strong>Email:</strong><br>
+            ✉️ <a href="mailto:business@desynkro.com">business@desynkro.com</a> — <span class="contact-note">Please allow up to 48 hours for a response.</span>
+          </p>
+
+          <p class="contact-row"><strong>Socials:</strong><br>
+            💬 <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer">Discord</a> — join the community<br>
+            ▶ <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer">YouTube</a> — tutorials, vlogs, and tech content<br>
+            📺 <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer">Twitch</a> — formerly streaming Just Chatting (retired)<br>
+            🐦 <a href="https://x.com/Desynkro" target="_blank" rel="noopener noreferrer">Twitter / X</a> — profile still up but I don't post anymore
+          </p>
+          <p class="contact-row"><strong>Support me:</strong><br>
+            ☕ <a href="https://ko-fi.com/desynkro" target="_blank" rel="noopener noreferrer">Ko-fi</a> — support the work<br>
+            💳           <a href="https://paypal.me/iagorosa97" target="_blank" rel="noopener noreferrer">PayPal</a> — direct support
+          </p>
+        </div>
+      </div>
+      <div class="carousel-card">
+        <div class="card-number">04 / 04</div>
+        <div class="card-title">REVIEWS</div>
+        <div class="card-body card-body--compact">
+          <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Excellent work, Always willing to go out of the way to improve his skills and always puts in the time and effort to get things done right."</p>
+            <div class="review-author">— Joshua Walter</div>
+            <div class="review-source">Google Local Guide</div>
+          </div>
+          <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Absolute top bloke and so easy to get along with and communicate with to get the perfect shot!! Such high-quality work and such friendly service, absolutely reccomend him to anyone who needs to get some photos done!"</p>
+            <div class="review-author">— Harry Matthews</div>
+          </div>
+          <div class="review">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"This guy can read your thoughts when you are trying to tell him your production ideas."</p>
+            <div class="review-author">— Walter Lucio Rosa</div>
+            <div class="review-source">Google Local Guide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-arrow" id="prevBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="carousel-dots" id="dots">
+        <button class="active" aria-label="Slide 1"></button>
+        <button aria-label="Slide 2"></button>
+        <button aria-label="Slide 3"></button>
+        <button aria-label="Slide 4"></button>
+      </div>
+      <button class="carousel-arrow" id="nextBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS & TOOLS ═══════════════ -->
+  <section class="skills-section">
+    <div class="section-label fade-in">━ SKILLS & TOOLS ━</div>
+    <div class="skills-grid">
+      <div class="skill-item fade-in" data-skill="Arch Linux"><span class="skill-icon">🐧</span><span class="skill-name">Arch Linux</span></div>
+      <div class="skill-item fade-in" data-skill="Cybersecurity"><span class="skill-icon">🛡️</span><span class="skill-name">Cybersecurity</span></div>
+      <div class="skill-item fade-in" data-skill="Web Development"><span class="skill-icon">🌐</span><span class="skill-name">Web Development</span></div>
+      <div class="skill-item fade-in" data-skill="Self-Hosting"><span class="skill-icon">🖥️</span><span class="skill-name">Self-Hosting</span></div>
+      <div class="skill-item fade-in" data-skill="Photography"><span class="skill-icon">📷</span><span class="skill-name">Photography</span></div>
+      <div class="skill-item fade-in" data-skill="Video Editing"><span class="skill-icon">🎞️</span><span class="skill-name">Video Editing</span></div>
+      <div class="skill-item fade-in" data-skill="Content Creation"><span class="skill-icon">🎬</span><span class="skill-name">Content Creation</span></div>
+      <div class="skill-item fade-in" data-skill="Linux Gaming"><span class="skill-icon">🎮</span><span class="skill-name">Linux Gaming</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PORTFOLIO GALLERY ═══════════════ -->
+  <section class="portfolio-section">
+    <div class="section-label fade-in">━ SAMPLE PORTFOLIO ━</div>
+    <div class="portfolio-wrapper" id="portfolioCarousel">
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_01.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_01.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_01.jpg" alt="Photography 01" loading="lazy">
+        </picture>
+        <div class="overlay"><span>01</span></div>
+      </div>
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_02.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_02.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_02.jpg" alt="Photography 02" loading="lazy">
+        </picture>
+        <div class="overlay"><span>02</span></div>
+      </div>
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_03.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_03.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_03.jpg" alt="Photography 03" loading="lazy">
+        </picture>
+        <div class="overlay"><span>03</span></div>
+      </div>
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_04.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_04.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_04.jpg" alt="Photography 04" loading="lazy">
+        </picture>
+        <div class="overlay"><span>04</span></div>
+      </div>
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_05.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_05.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_05.jpg" alt="Photography 05" loading="lazy">
+        </picture>
+        <div class="overlay"><span>05</span></div>
+      </div>
+      <div class="portfolio-item fade-in" data-src="/images/frontpage/frontpage_06.webp">
+        <picture>
+          <source srcset="/images/frontpage/frontpage_06.webp" type="image/webp">
+          <img src="/images/frontpage/frontpage_06.jpg" alt="Photography 06" loading="lazy">
+        </picture>
+        <div class="overlay"><span>06</span></div>
+      </div>
+      <div class="portfolio-item fade-in portfolio-item--wide" data-type="website" data-src="/portfolio/websites/wci-dig.mp4" data-thumb="/portfolio/websites/designs/wci-dig-thumb.png" data-link="https://wci-dig.com">
+        <img src="/portfolio/websites/designs/wci-dig-thumb.png" alt="WCI-DIG Website" loading="lazy">
+        <div class="overlay"><span>WEBSITE</span></div>
+      </div>
+      <div class="portfolio-item fade-in portfolio-item--wide" data-type="animation" data-src="/portfolio/animations/001.mp4" data-thumb="/portfolio/animations/posters/001.jpg">
+        <img src="/portfolio/animations/posters/001.jpg" alt="Animation 01" loading="lazy">
+        <div class="overlay"><span>ANIMATION</span></div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-arrow" id="portPrevBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="carousel-dots" id="portDots">
+        <button class="active"></button>
+        <button></button>
+      </div>
+      <button class="carousel-arrow" id="portNextBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+    </div>
+    <div class="portfolio-note fade-in">I ALSO BUILT THIS WEBSITE</div>
+    <div class="portfolio-cta fade-in">
+      <a href="/portfolio" class="cta-btn">
+        <span>SEE MORE OF MY WORK</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-label">FIND ME ON</span>
+        <div class="footer-socials-row">
+          <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon yt" title="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+          </a>
+          <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon tw" title="Twitch">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.428l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+          </a>
+          <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon xx" title="Twitter / X">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer" class="social-icon dc" title="Discord">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">SUPPORT ME</span>
+        <div class="support-btns">
+          <a href="https://paypal.me/iagorosa97" target="_blank" rel="noopener noreferrer" class="support-btn" title="PayPal">PayPal</a>
+          <a href="https://ko-fi.com/desynkro" target="_blank" rel="noopener noreferrer" class="support-btn" title="Ko-fi">Ko‑fi</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-copy">
+          Copyright © 2022-<span id="year"></span> DeSynkro.<br>All rights reserved.<br>
+          <span class="footer-made">BUILT WITH <span class="heart">♥</span> FROM SCRATCH</span>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">Website inspired by <br class="footer-break"><a href="https://kirakitsune.dev/" target="_blank" rel="noopener noreferrer" class="footer-link">Kira Kitsune</a>'s original design 🦊</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <div class="lightbox-body">
+      <button class="lightbox-arrow lightbox-prev" id="lbPrev">‹</button>
+      <div class="lightbox-view">
+        <img class="lightbox-img" id="lbImg" alt="Expanded view">
+        <video class="lb-vid" id="lbVid" controls playsinline style="display:none"></video>
+        <a class="lb-site-btn" id="lbSiteBtn" href="javascript:void(0)" target="_blank" rel="noopener noreferrer" style="display:none">VISIT WEBSITE →</a>
+      </div>
+      <button class="lightbox-arrow lightbox-next" id="lbNext">›</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SKILL OVERLAY ═══════════════ -->
+  <div class="skill-overlay" id="skillOverlay">
+    <button class="skill-overlay-close" aria-label="Close">✕</button>
+    <div class="skill-overlay-card">
+      <div class="skill-overlay-icon"></div>
+      <div class="skill-overlay-name"></div>
+      <div class="skill-overlay-desc"></div>
+      <div class="skill-overlay-specs"></div>
+      <div class="skill-overlay-tools"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <script src="/js/script.js"></script>
+</body>
+</html>

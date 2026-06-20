@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
+  <title>Portfolio — DeSynkro</title>
+  <meta name="description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <meta property="og:title" content="Portfolio — DeSynkro">
+  <meta property="og:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://desynkro.com/portfolio">
+  <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio — DeSynkro">
+  <meta name="twitter:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <link rel="canonical" href="https://desynkro.com/portfolio">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logos/favicon-16.png">
+  
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════ HEADER / NAV ═══════════════ -->
+  <header>
+    <a href="/"><img src="/images/logos/header_logo.png" alt="desynkro" class="header-logo"></a>
+    <nav class="nav">
+      <a href="/">HOME</a>
+      <a href="/portfolio" class="nav-active">PORTFOLIO</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)">SOCIALS <svg class="nav-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="dropdown-menu">
+          <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+          <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer">TWITCH</a>
+          <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer">TWITTER</a>
+          <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer">DISCORD</a>
+      </div>
+    </div>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="/" class="mobile-link">HOME</a>
+  <a href="/portfolio" class="mobile-link mobile-active">PORTFOLIO</a>
+  <div class="mobile-socials">
+    <span class="mobile-socials-label">SOCIALS</span>
+    <div class="mobile-social-icons">
+      <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi yt">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi tw">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.089 0L.525 4.175v16.694h5.736V24h3.132l3.127-3.132h4.695l6.26-6.258V0H2.089zm18.763 13.553l-3.652 3.651H12l-3.127 3.132v-3.132H4.473V2.089h16.379v11.464zM14.39 6.188v5.736H12V6.188h2.39zm-5.212 0v5.736H6.789V6.188h2.389z"/></svg>
+      </a>
+      <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="msi xx">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer" class="msi dc">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- ═══════════════ PORTFOLIO HERO ═══════════════ -->
+  <main>
+  <section class="pf-hero">
+    <div class="pf-hero-bg"></div>
+    <div class="pf-hero-shine"></div>
+    <div class="pf-hero-inner">
+      <div class="pf-hero-label">EXPLORE MY</div>
+      <h1 class="pf-hero-title">PORTFOLIO</h1>
+      <p class="pf-hero-sub"><span class="pf-hs-line1">PHOTOGRAPHY &bull; WEBSITES</span><span class="pf-hs-sep"> &bull; </span><span class="pf-hs-line2">ANIMATIONS &bull; VIDEOS</span></p>
+      <div class="pf-hero-pills" id="heroPills"></div>
+    </div>
+    <div class="hero-chevron" id="heroChevron">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MAIN CONTENT ═══════════════ -->
+  <div class="pf-main" id="pfMain">
+
+    <!-- CATEGORY HERO -->
+    <section class="pf-cat-hero" id="pfCatHero" style="display:none">
+      <div class="pf-cat-hero-bg" id="pfCatHeroBg"></div>
+      <div class="pf-cat-hero-shine" id="pfCatHeroShine"></div>
+      <div class="pf-cat-hero-inner">
+        <h2 class="pf-cat-hero-title" id="pfCatHeroTitle"></h2>
+        <p class="pf-cat-hero-desc" id="pfCatHeroDesc"></p>
+      </div>
+    </section>
+
+    <!-- LEVEL 1: CATEGORY SHOWCASE -->
+    <section class="pf-browse" id="pfBrowse">
+      <div class="pf-showcase" id="pfShowcase"></div>
+    </section>
+
+    <!-- LEVEL 2: SUBCATEGORIES -->
+    <section class="pf-browse" id="pfSubBrowse" style="display:none">
+      <div class="pf-level-bar">
+        <button class="pf-back" id="pfBackTop"><span class="pf-back-arr">←</span><span class="pf-back-lbl"> BACK</span></button>
+        <span class="pf-level-title" id="pfLevelTitle"></span>
+      </div>
+      <div class="pf-subgrid" id="pfSubgrid"></div>
+      <div class="pf-yt-cta" id="pfYtCta" style="display:none">
+        <a href="https://www.youtube.com/@DeSynkro" target="_blank" rel="noopener noreferrer" class="pf-yt-cta-link">
+          These are my favorites! Watch more on my YouTube
+        </a>
+      </div>
+    </section>
+
+    <!-- LEVEL 3: GALLERY -->
+    <section class="pf-gallery" id="pfGallery" style="display:none">
+      <div class="pf-level-bar pf-gallery-bar">
+        <button class="pf-back" id="pfBackGallery"><span class="pf-back-arr">←</span><span class="pf-back-lbl"> BACK</span></button>
+        <span class="pf-level-title" id="pfGalleryTitle"></span>
+      </div>
+      <div class="pf-grid" id="pfGrid"></div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="pf-lightbox" id="pfLightbox">
+      <button class="pf-lightbox-close">✕</button>
+      <div class="pf-lightbox-counter" id="pfLbCounter"></div>
+      <div class="pf-lightbox-body">
+        <div class="pf-lightbox-view">
+          <img class="pf-lightbox-img" id="lbImg" alt="Portfolio image">
+          <a class="pf-lightbox-link" id="lbLink" href="javascript:void(0)" target="_blank" rel="noopener noreferrer" style="display:none">VISIT SITE →</a>
+        </div>
+        <button class="pf-lightbox-arrow pf-lightbox-prev" id="lbPrev">‹</button>
+        <button class="pf-lightbox-arrow pf-lightbox-next" id="lbNext">›</button>
+      </div>
+      <div class="pf-lightbox-footer">
+        <div class="pf-lightbox-name" id="lbName"></div>
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+  <div class="pf-sticky-bar" id="pfStickyBar">
+    <button class="pf-back pf-back--sticky" id="pfBackGallerySticky"><span class="pf-back-arr">←</span><span class="pf-back-lbl"> BACK</span></button>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-label">FIND ME ON</span>
+        <div class="footer-socials-row">
+          <a href="https://www.youtube.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon yt" title="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 4-8 4z"/></svg>
+          </a>
+          <a href="https://www.twitch.tv/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon tw" title="Twitch">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.428l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+          </a>
+          <a href="https://x.com/DeSynkro" target="_blank" rel="noopener noreferrer" class="social-icon xx" title="Twitter / X">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://discord.com/invite/qptZkCj" target="_blank" rel="noopener noreferrer" class="social-icon dc" title="Discord">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <span class="footer-label">SUPPORT ME</span>
+        <div class="support-btns">
+          <a href="https://paypal.me/iagorosa97" target="_blank" rel="noopener noreferrer" class="support-btn" title="PayPal">PayPal</a>
+          <a href="https://ko-fi.com/desynkro" target="_blank" rel="noopener noreferrer" class="support-btn" title="Ko-fi">Ko‑fi</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-copy">
+          Copyright © 2022-<span id="year"></span> DeSynkro.<br>All rights reserved.<br>
+          <span class="footer-made">BUILT WITH <span class="heart">♥</span> FROM SCRATCH</span>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">Website inspired by <br class="footer-break"><a href="https://kirakitsune.dev/" target="_blank" rel="noopener noreferrer" class="footer-link">Kira Kitsune</a>'s original design 🦊</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <script src="/js/portfolio-data.js"></script>
+  <script>
+    (function() {
+      // ── REFS ──
+      const showcase = document.getElementById('pfShowcase');
+      const subGrid = document.getElementById('pfSubgrid');
+      const galleryGrid = document.getElementById('pfGrid');
+      const browse = document.getElementById('pfBrowse');
+      const subBrowse = document.getElementById('pfSubBrowse');
+      const gallery = document.getElementById('pfGallery');
+      const levelTitle = document.getElementById('pfLevelTitle');
+      const galleryTitle = document.getElementById('pfGalleryTitle');
+      const backTop = document.getElementById('pfBackTop');
+      const ytCta = document.getElementById('pfYtCta');
+      const backGallery = document.getElementById('pfBackGallery');
+      const backGallerySticky = document.getElementById('pfBackGallerySticky');
+      const pfStickyBar = document.getElementById('pfStickyBar');
+      const pfCatHero = document.getElementById('pfCatHero');
+      const pfCatHeroBg = document.getElementById('pfCatHeroBg');
+      const pfCatHeroShine = document.getElementById('pfCatHeroShine');
+      const pfCatHeroTitle = document.getElementById('pfCatHeroTitle');
+      const pfCatHeroDesc = document.getElementById('pfCatHeroDesc');
+      const heroPills = document.getElementById('heroPills');
+      const pfMain = document.getElementById('pfMain');
+
+      let currentParent = null;
+      let currentSub = null;
+      let lbIndex = 0;
+      let levelStack = [];
+      let lastCategorySlug = null;
+
+      function getItems(cat) { return cat.items || cat.images || []; }
+      function countItems(cat) {
+        if (cat.items) return cat.items.length;
+        if (cat.images) return cat.images.length;
+        if (cat.children) return cat.children.reduce((s, c) => s + countItems(c), 0);
+        return 0;
+      }
+
+      // ── PILLS ──
+      portfolioData.forEach(cat => {
+        const pill = document.createElement('button');
+        pill.className = 'pf-pill';
+        const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥' };
+        pill.textContent = (emojis[cat.slug] ? emojis[cat.slug] + ' ' : '') + cat.title;
+        pill.addEventListener('click', () => {
+          const existing = portfolioData.find(c => c.slug === cat.slug);
+          if (!existing) return;
+          if (existing.items && existing.items.length && existing.type) {
+            openGallery(existing);
+          } else if (existing.children && existing.children.length) {
+            renderSubCategories(existing);
+          }
+        });
+        heroPills.appendChild(pill);
+      });
+
+      function scrollToShowcase() {
+        pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      const catThemes = {
+        photography: { accent: '#00d4ff', g1: '#001218', g2: '#00202B', g3: '#0a0020' },
+        videos:      { accent: '#d400ff', g1: '#180018', g2: '#2B0020', g3: '#200040' },
+        animations:  { accent: '#00ff88', g1: '#001810', g2: '#002B1a', g3: '#002010' },
+        websites:    { accent: '#ff8800', g1: '#181000', g2: '#2B1a00', g3: '#201000' },
+      };
+
+      function showCatHero(cat) {
+        pfCatHero.style.display = 'flex';
+        const theme = catThemes[cat.slug] || catThemes.photography;
+        pfCatHeroBg.style.background = `linear-gradient(135deg, ${theme.g1} 0%, ${theme.g2} 30%, ${theme.g3} 60%, ${theme.g1} 100%)`;
+        pfCatHeroShine.style.background = `radial-gradient(ellipse at 30% 50%, ${theme.accent}22 0%, transparent 60%),
+                                           radial-gradient(ellipse at 70% 50%, ${theme.accent}11 0%, transparent 60%)`;
+        pfCatHero.style.setProperty('--cat-accent', theme.accent);
+        pfCatHeroTitle.textContent = cat.title;
+        pfCatHeroDesc.textContent = cat.desc || '';
+        const hero = document.querySelector('.pf-hero');
+        if (hero) hero.style.display = 'none';
+      }
+
+      function hideCatHero() {
+        pfCatHero.style.display = 'none';
+        const hero = document.querySelector('.pf-hero');
+        if (hero) hero.style.display = '';
+      }
+
+      function pushState(slug, title, url, replace) {
+        try {
+          const safeUrl = !url || window.location.protocol === 'file:' ? null : url;
+          if (replace) {
+            history.replaceState({ slug }, title, safeUrl);
+          } else {
+            history.pushState({ slug }, title, safeUrl);
+          }
+        } catch(e) { /* history API unavailable */ }
+        document.title = `${title} — DeSynkro`;
+      }
+
+      // ── LEVEL 1: SHOWCASE ──
+      function renderShowcase(scroll, fromSlug) {
+        currentParent = null;
+        currentSub = null;
+        levelStack = [];
+        browse.style.display = '';
+        subBrowse.style.display = 'none';
+        gallery.style.display = 'none';
+        ytCta.style.display = 'none';
+        hideCatHero();
+        adjustMainPadding();
+        pushState(null, 'Portfolio', '/portfolio', true);
+        document.title = 'Portfolio — DeSynkro';
+
+
+        showcase.innerHTML = portfolioData.map((cat, i) => {
+          const total = countItems(cat);
+          const label = cat.type === 'animation' ? 'ANIMATIONS'
+            : cat.type === 'video' ? 'VIDEOS'
+            : cat.type === 'website' ? 'SITES'
+            : 'PROJECTS';
+          const thumb = cat.thumb || '';
+          const desc = cat.desc || `${total} ${label}`;
+          const isEven = i % 2 === 0;
+          const countLabel = cat.type === 'animation' ? 'ANIMATIONS'
+            : cat.type === 'video' ? 'VIDEOS'
+            : cat.type === 'website' ? 'WEBSITES'
+            : cat.slug === 'videos' ? 'VIDEOS'
+            : 'PHOTOS';
+          return `
+            <div class="pf-feature" data-slug="${cat.slug}">
+              <div class="pf-feature-visual">
+                <div class="pf-feature-bg" style="background-image:url('${thumb}')"></div>
+                <div class="pf-feature-glow"></div>
+              </div>
+              <div class="pf-feature-info">
+                <h2 class="pf-feature-title">${cat.title}</h2>
+                <p class="pf-feature-desc">${desc}</p>
+                <span class="pf-feature-count">${total} ${countLabel}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        showcase.querySelectorAll('.pf-feature').forEach((el, i) => {
+          setTimeout(() => el.classList.add('show'), i * 120);
+          el.addEventListener('click', () => {
+              const cat = portfolioData.find(c => c.slug === el.dataset.slug);
+              if (!cat) return;
+              if (cat.items && cat.items.length && cat.type) {
+                openGallery(cat);
+              } else if (cat.children && cat.children.length) {
+                renderSubCategories(cat);
+              }
+          });
+        });
+        if (scroll) {
+          let target = null;
+          if (fromSlug === 'animations' || fromSlug === 'videos') {
+            target = showcase.querySelector('[data-slug="animations"]');
+          }
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+
+      // ── LEVEL 2: SUBCATEGORIES ──
+      function renderSubCategories(parent, replace) {
+        currentParent = parent;
+        lastCategorySlug = parent.slug;
+        currentSub = null;
+        browse.style.display = 'none';
+        subBrowse.style.display = '';
+        gallery.style.display = 'none';
+        ytCta.style.display = parent.slug === 'videos' ? '' : 'none';
+        showCatHero(parent);
+        adjustMainPadding();
+        const url = levelStack.length
+          ? '/' + levelStack.map(p => p.slug).join('/') +
+            (levelStack[levelStack.length - 1].slug === parent.slug ? '' : '/' + parent.slug)
+          : '/' + parent.slug;
+        pushState(parent.slug, parent.title, url, replace);
+        levelTitle.textContent = '';
+        backTop.innerHTML = levelStack.length
+          ? `<span class="pf-back-arr">←</span><span class="pf-back-lbl"> BACK TO ${levelStack[levelStack.length - 1].title.toUpperCase()}</span>`
+          : '<span class="pf-back-arr">←</span><span class="pf-back-lbl"> BACK</span>';
+
+        const isLocations = parent.slug === 'locations';
+        subGrid.classList.toggle('pf-subgrid--locations', isLocations);
+        subGrid.innerHTML = parent.children.map(child => {
+          const items = getItems(child);
+          const label = child.type === 'video' ? 'VIDEOS'
+            : child.type === 'website' ? 'SITES'
+            : child.type === 'animation' ? 'ANIMATIONS'
+            : 'PHOTOS';
+          const locClass = isLocations ? ' pf-subcard--location' : '';
+          const videoClass = child.type === 'video' ? ' pf-subcard--video' : '';
+          return `
+            <div class="pf-subcard${locClass}${videoClass}" data-slug="${child.slug}">
+              <div class="pf-subcard-bg" style="background-image:url('${child.thumb}')"></div>
+              <div class="pf-subcard-label"><span class="pf-subcard-title">${child.title}</span> <span class="pf-subcard-count">${countItems(child)} ${label}</span></div>
+            </div>
+          `;
+        }).join('');
+
+        subGrid.querySelectorAll('.pf-subcard').forEach(card => {
+          card.addEventListener('click', () => {
+            const slug = card.dataset.slug;
+            const child = parent.children.find(c => c.slug === slug);
+            if (!child) return;
+            const items = getItems(child);
+            if (items.length) {
+              openGallery(child);
+            } else if (child.children && child.children.length) {
+              levelStack.push(parent);
+              renderSubCategories(child);
+            }
+          });
+        });
+
+        requestAnimationFrame(() => {
+          subGrid.querySelectorAll('.pf-subcard').forEach((el, i) => {
+            setTimeout(() => el.classList.add('show'), i * 80);
+          });
+        });
+        if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      backTop.addEventListener('click', () => {
+        if (levelStack.length) {
+          renderSubCategories(levelStack.pop(), true);
+        } else {
+          renderShowcase(true, lastCategorySlug);
+        }
+      });
+
+      backGallery.addEventListener('click', () => {
+        pfStickyBar.classList.remove('visible');
+        if (currentParent) {
+          if (levelStack.length && levelStack[levelStack.length - 1] === currentParent) {
+            levelStack.pop();
+          }
+          renderSubCategories(currentParent, true);
+        } else {
+          renderShowcase(true, lastCategorySlug);
+        }
+      });
+
+      backGallerySticky.addEventListener('click', () => {
+        pfStickyBar.classList.remove('visible');
+        if (currentParent) {
+          if (levelStack.length && levelStack[levelStack.length - 1] === currentParent) {
+            levelStack.pop();
+          }
+          renderSubCategories(currentParent, true);
+        } else {
+          renderShowcase(true, lastCategorySlug);
+        }
+      });
+
+      // ── LEVEL 3: GALLERY ──
+      function openGallery(cat, replace) {
+        currentSub = cat;
+        lastCategorySlug = (currentParent || cat).slug;
+        if (pfStickyBar) pfStickyBar.classList.remove('visible');
+        browse.style.display = 'none';
+        subBrowse.style.display = 'none';
+        gallery.style.display = '';
+        showCatHero(currentParent || cat);
+        adjustMainPadding();
+        const ancestors = [];
+        if (levelStack.length) ancestors.push(...levelStack);
+        if (currentParent && !ancestors.some(a => a.slug === currentParent.slug)) ancestors.push(currentParent);
+        const url = ancestors.length
+          ? '/' + ancestors.map(a => a.slug).join('/') + '/' + cat.slug
+          : '/' + cat.slug;
+        pushState(cat.slug, cat.title, url, replace);
+        galleryTitle.textContent = currentParent ? cat.title : '';
+        backGallery.innerHTML = `<span class="pf-back-arr">←</span><span class="pf-back-lbl">${currentParent ? ` BACK TO ${currentParent.title.toUpperCase()}` : ' BACK'}</span>`;
+        backGallerySticky.innerHTML = `<span class="pf-back-arr">←</span><span class="pf-back-lbl">${currentParent ? ` BACK TO ${currentParent.title.toUpperCase()}` : ' BACK'}</span>`;
+
+        const items = getItems(cat);
+        const isVideo = cat.type === 'video';
+        const isAnimation = cat.type === 'animation';
+        const isWebsite = cat.type === 'website';
+        const isLocation = currentParent && currentParent.slug === 'locations';
+        const isWide = isVideo || isLocation;
+        const isNarrow = isAnimation || isWebsite;
+
+        galleryGrid.className = 'pf-grid' + (isWide ? ' pf-grid--wide' : isNarrow ? ' pf-grid--narrow' : '');
+        galleryGrid.innerHTML = items.map((item, i) => {
+          const thumb = item.thumb || item;
+          const playOverlay = (isVideo || isAnimation) ? '<div class="pf-grid-play">▶</div>' : '';
+          const wideClass = (isWide || isNarrow) ? ' pf-grid-item--wide' : '';
+          const label = item.title ? item.title.length > 40 ? item.title.slice(0, 39) + '…' : item.title : '';
+          return `
+            <div class="pf-grid-cell" data-index="${i}">
+              <div class="pf-grid-item${wideClass}">
+                <img src="${thumb}" alt="${cat.title}" loading="lazy">
+                ${playOverlay}
+              </div>
+              ${label ? `<span class="pf-grid-label">${label}</span>` : ''}
+            </div>
+          `;
+        }).join('');
+
+        galleryGrid.querySelectorAll('.pf-grid-cell').forEach(el => {
+          el.addEventListener('click', () => {
+            lbIndex = parseInt(el.dataset.index);
+            openLightbox();
+          });
+        });
+
+        requestAnimationFrame(() => {
+          galleryGrid.querySelectorAll('.pf-grid-cell').forEach((el, i) => {
+            setTimeout(() => el.classList.add('show'), i * 40);
+          });
+        });
+        if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // ── LIGHTBOX ──
+      const lb = document.getElementById('pfLightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbCounter = document.getElementById('pfLbCounter');
+      const lbName = document.getElementById('lbName');
+      const lbLink = document.getElementById('lbLink');
+      const lbClose = document.querySelector('.pf-lightbox-close');
+      const lbPrev = document.getElementById('lbPrev');
+      const lbNext = document.getElementById('lbNext');
+
+      function hideLightboxMedia() {
+        const f = lb.querySelector('.pf-lb-frame');
+        if (f) { f.style.display = 'none'; f.src = ''; }
+        const v = lb.querySelector('.pf-lb-vid');
+        if (v) { v.style.display = 'none'; v.pause(); v.src = ''; v.load(); }
+        const d = lb.querySelector('.pf-lb-demo');
+        if (d) { d.style.display = 'none'; d.pause(); d.src = ''; d.load(); }
+        lbImg.style.display = 'none';
+        lbLink.style.display = 'none';
+      }
+
+      function openLightbox() {
+        const items = getItems(currentSub);
+        if (!items.length) return;
+        const item = items[lbIndex];
+        const type = currentSub.type || 'image';
+        const total = items.length;
+
+        lbCounter.textContent = `${lbIndex + 1} / ${total}`;
+        lbName.textContent = item.title || '';
+        hideLightboxMedia();
+
+        if (type === 'video') {
+          let frame = lb.querySelector('.pf-lb-frame');
+          if (!frame) {
+            frame = document.createElement('iframe');
+            frame.className = 'pf-lb-frame';
+            frame.allow = 'autoplay; encrypted-media';
+            frame.allowFullscreen = true;
+            lb.querySelector('.pf-lightbox-view').prepend(frame);
+          }
+          frame.style.display = '';
+          frame.src = `https://www.youtube.com/embed/${item.videoId}?autoplay=1`;
+        } else if (type === 'animation') {
+          let video = lb.querySelector('.pf-lb-vid');
+          if (!video) {
+            video = document.createElement('video');
+            video.className = 'pf-lb-vid';
+            video.controls = true;
+            video.playsInline = true;
+            lb.querySelector('.pf-lightbox-view').prepend(video);
+          }
+          video.style.display = '';
+          video.poster = item.thumb || '';
+          video.src = item.src;
+          video.load();
+          video.volume = 0.2;
+          video.play().catch(() => {});
+        } else if (type === 'website') {
+          if (item.src) {
+            let demo = lb.querySelector('.pf-lb-demo');
+            if (!demo) {
+              demo = document.createElement('video');
+              demo.className = 'pf-lb-demo';
+              demo.controls = true;
+              demo.playsInline = true;
+              demo.loop = true;
+              lb.querySelector('.pf-lightbox-view').prepend(demo);
+            }
+            demo.style.display = '';
+            demo.poster = item.thumb || '';
+            demo.src = item.src;
+            demo.load();
+            demo.volume = 0.2;
+            demo.play().catch(() => {});
+          } else {
+            lbImg.style.display = '';
+            lbImg.src = item.thumb || item;
+          }
+          lbLink.href = item.url || '#';
+          lbLink.style.display = '';
+          lbLink.textContent = 'VISIT SITE →';
+        } else {
+          lbImg.style.display = '';
+          lbImg.src = item.thumb || item;
+        }
+
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        const frame = lb.querySelector('.pf-lb-frame');
+        if (frame) frame.src = '';
+        const video = lb.querySelector('.pf-lb-vid');
+        if (video) { video.pause(); video.src = ''; video.load(); }
+        const demo = lb.querySelector('.pf-lb-demo');
+        if (demo) { demo.pause(); demo.src = ''; demo.load(); }
+        lbLink.style.display = 'none';
+      }
+
+      function prevItem() {
+        const items = getItems(currentSub);
+        if (!items.length) return;
+        lbIndex = (lbIndex - 1 + items.length) % items.length;
+        refreshLightboxItem();
+      }
+
+      function nextItem() {
+        const items = getItems(currentSub);
+        if (!items.length) return;
+        lbIndex = (lbIndex + 1) % items.length;
+        refreshLightboxItem();
+      }
+
+      function refreshLightboxItem() {
+        const items = getItems(currentSub);
+        const item = items[lbIndex];
+        const type = currentSub.type || 'image';
+        lbCounter.textContent = `${lbIndex + 1} / ${items.length}`;
+        lbName.textContent = item.title || '';
+        hideLightboxMedia();
+
+        if (type === 'video') {
+          const frame = lb.querySelector('.pf-lb-frame');
+          if (frame) { frame.style.display = ''; frame.src = `https://www.youtube.com/embed/${item.videoId}?autoplay=1`; }
+        } else if (type === 'animation') {
+          const video = lb.querySelector('.pf-lb-vid');
+          if (video) {
+            video.style.display = '';
+            video.poster = item.thumb || '';
+            video.src = item.src;
+            video.load();
+            video.volume = 0.2;
+            video.play().catch(() => {});
+          }
+        } else if (type === 'website') {
+          if (item.src) {
+            let d = lb.querySelector('.pf-lb-demo');
+            if (!d) {
+              d = document.createElement('video');
+              d.className = 'pf-lb-demo';
+              d.controls = true;
+              d.playsInline = true;
+              d.loop = true;
+              lb.querySelector('.pf-lightbox-view').prepend(d);
+            }
+            d.style.display = '';
+            d.poster = item.thumb || '';
+            d.src = item.src;
+            d.load();
+            d.volume = 0.2;
+            d.play().catch(() => {});
+          } else {
+            lbImg.style.display = '';
+            lbImg.src = item.thumb || item;
+          }
+          lbLink.href = item.url || '#';
+          lbLink.style.display = '';
+          lbLink.textContent = 'VISIT SITE →';
+        } else {
+          lbImg.style.display = '';
+          lbImg.src = item.thumb || item;
+          lbLink.style.display = 'none';
+        }
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lbPrev.addEventListener('click', prevItem);
+      lbNext.addEventListener('click', nextItem);
+
+      lb.addEventListener('click', (e) => {
+        if (e.target === lb || e.target.classList.contains('pf-lightbox-body') || e.target.classList.contains('pf-lightbox-view')) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevItem();
+        if (e.key === 'ArrowRight') nextItem();
+      });
+
+      // ── STICKY BACK BAR ──
+      let topBarObserver = null;
+      function isPhotographyAncestor() {
+        if (currentParent && currentParent.slug === 'photography') return true;
+        if (currentParent && currentParent.title === 'Photography') return true;
+        for (const anc of levelStack) {
+          if (anc.slug === 'photography' || anc.title === 'Photography') return true;
+        }
+        return false;
+      }
+      function adjustMainPadding() {
+        if (pfMain) {
+          pfMain.style.paddingBottom = isPhotographyAncestor() ? '80px' : '';
+        }
+      }
+      function setupStickyObserver() {
+        if (topBarObserver) topBarObserver.disconnect();
+        if (!backGallery || !pfStickyBar) return;
+        topBarObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (gallery.style.display !== 'none' && isPhotographyAncestor()) {
+              pfStickyBar.classList.toggle('visible', !entry.isIntersecting);
+            } else {
+              pfStickyBar.classList.remove('visible');
+            }
+          });
+        }, { threshold: 0 });
+        topBarObserver.observe(backGallery);
+      }
+      setupStickyObserver();
+
+      // ── STICKY BAR: PUSH UP BEFORE FOOTER ──
+      const pfFooter = document.querySelector('footer');
+      function updateStickyBottom() {
+        if (!pfFooter || !pfStickyBar) return;
+        if (!pfStickyBar.classList.contains('visible')) {
+          pfStickyBar.style.bottom = '';
+          return;
+        }
+        const ft = pfFooter.getBoundingClientRect().top;
+        const gap = 60;
+        const barH = pfStickyBar.offsetHeight || 44;
+        const normalBottom = 20;
+        if (ft < window.innerHeight + gap) {
+          const push = window.innerHeight - ft + gap;
+          pfStickyBar.style.bottom = Math.max(normalBottom, push) + 'px';
+        } else {
+          pfStickyBar.style.bottom = normalBottom + 'px';
+        }
+      }
+      document.addEventListener('scroll', updateStickyBottom, { passive: true });
+      // Also update when bar becomes visible/hidden
+      const obs = new MutationObserver(updateStickyBottom);
+      if (pfStickyBar) obs.observe(pfStickyBar, { attributes: true, attributeFilter: ['class'] });
+
+      // ── CHEVRON ──
+      const chevron = document.getElementById('heroChevron');
+      if (chevron) {
+        chevron.addEventListener('click', () => {
+          const main = document.getElementById('pfMain');
+          if (main) main.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // ── URL ROUTING ──
+      function findChild(parent, slug) {
+        if (!parent.children) return null;
+        for (const c of parent.children) {
+          if (c.slug === slug) return c;
+          if (c.children) {
+            const found = findChild(c, slug);
+            if (found) return found;
+          }
+        }
+        return null;
+      }
+
+      function navigateFromURL(replace) {
+        const raw = window.location.pathname.replace(/^\/+/, '').replace(/\/+$/, '');
+        const parts = raw.split('/');
+        const idx = (parts[0] === 'portfolio' || parts[0] === 'portfolio.html') ? 1 : 0;
+        const slug = parts[idx];
+        const subSlug = parts[idx + 1];
+        const deepSlug = parts[idx + 2];
+
+        if (!slug) { renderShowcase(); return; }
+
+        const cat = portfolioData.find(c => c.slug === slug);
+        if (!cat) { renderShowcase(); return; }
+
+        // 3 levels deep e.g. /photography/locations/bagui
+        if (deepSlug && cat.children) {
+          const subCat = cat.children.find(c => c.slug === subSlug);
+          if (subCat && subCat.children) {
+            const deep = subCat.children.find(c => c.slug === deepSlug);
+            if (deep) {
+              currentParent = subCat;
+              levelStack = [cat, subCat];
+              openGallery(deep, replace);
+              return;
+            }
+          }
+        }
+
+        // 2 levels deep e.g. /photography/animals or /videos/gaming
+        if (subSlug && cat.children) {
+          const child = findChild(cat, subSlug);
+          if (child) {
+            const items = getItems(child);
+            if (items.length) {
+              currentParent = cat;
+              levelStack = [];
+              openGallery(child, replace);
+            } else if (child.children && child.children.length) {
+              levelStack = [cat];
+              renderSubCategories(child, replace);
+            }
+            return;
+          }
+        }
+
+        // Top-level category
+        if (cat.items && cat.items.length) {
+          openGallery(cat, replace);
+        } else if (cat.children && cat.children.length) {
+          levelStack = [];
+          renderSubCategories(cat, replace);
+        } else {
+          renderShowcase();
+        }
+      }
+
+      window.addEventListener('popstate', () => {
+        closeLightbox();
+        navigateFromURL(true);
+      });
+
+      // ── INIT ──
+      navigateFromURL(true);
+    })();
+  </script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

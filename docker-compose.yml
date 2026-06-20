@@ -1,0 +1,10 @@
+services:
+  site:
+    image: nginx:alpine
+    container_name: desynkro-website
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
