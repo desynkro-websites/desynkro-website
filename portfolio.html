@@ -5,20 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
   <title>DeSynkro Portfolio</title>
-  <meta name="description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <meta name="description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
   <meta property="og:title" content="DeSynkro Portfolio">
-  <meta property="og:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <meta property="og:description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://desynkro.com/portfolio">
   <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DeSynkro Portfolio">
-  <meta name="twitter:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
+  <meta name="twitter:description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
   <link rel="canonical" href="https://desynkro.com/portfolio">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/logos/favicon-16.png">
-  
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DeSynkro",
+    "url": "https://desynkro.com"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "DeSynkro Portfolio",
+    "description": "Explore DeSynkro's portfolio: photography, videos, websites, and animations.",
+    "url": "https://desynkro.com/portfolio",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desynkro.com" },
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://desynkro.com/portfolio" }
+      ]
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -235,28 +261,22 @@
       }
 
       // ── PILLS ──
+      const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥', codeberg: '🔷' };
       portfolioData.forEach(cat => {
         const pill = document.createElement('button');
         pill.className = 'pf-pill';
-        const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥', codeberg: '🔷' };
         pill.textContent = (emojis[cat.slug] ? emojis[cat.slug] + ' ' : '') + cat.title;
         pill.addEventListener('click', () => {
-          const existing = portfolioData.find(c => c.slug === cat.slug);
-          if (!existing) return;
-          if (existing.type === 'codeberg') {
-            renderCodebergProjects(existing);
-          } else if (existing.items && existing.items.length && existing.type) {
-            openGallery(existing);
-          } else if (existing.children && existing.children.length) {
-            renderSubCategories(existing);
+          if (cat.type === 'codeberg') {
+            renderCodebergProjects(cat);
+          } else if (cat.items && cat.items.length && cat.type) {
+            openGallery(cat);
+          } else if (cat.children && cat.children.length) {
+            renderSubCategories(cat);
           }
         });
         heroPills.appendChild(pill);
       });
-
-      function scrollToShowcase() {
-        pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
 
       const catThemes = {
         photography: { accent: '#00d4ff', g1: '#001218', g2: '#00202B', g3: '#0a0020' },
@@ -433,6 +453,18 @@
         if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
+      function handleBack() {
+        pfStickyBar.classList.remove('visible');
+        if (currentParent) {
+          if (levelStack.length && levelStack[levelStack.length - 1] === currentParent) {
+            levelStack.pop();
+          }
+          renderSubCategories(currentParent, true);
+        } else {
+          renderShowcase(true, lastCategorySlug);
+        }
+      }
+
       backTop.addEventListener('click', () => {
         if (levelStack.length) {
           renderSubCategories(levelStack.pop(), true);
@@ -441,29 +473,8 @@
         }
       });
 
-      backGallery.addEventListener('click', () => {
-        pfStickyBar.classList.remove('visible');
-        if (currentParent) {
-          if (levelStack.length && levelStack[levelStack.length - 1] === currentParent) {
-            levelStack.pop();
-          }
-          renderSubCategories(currentParent, true);
-        } else {
-          renderShowcase(true, lastCategorySlug);
-        }
-      });
-
-      backGallerySticky.addEventListener('click', () => {
-        pfStickyBar.classList.remove('visible');
-        if (currentParent) {
-          if (levelStack.length && levelStack[levelStack.length - 1] === currentParent) {
-            levelStack.pop();
-          }
-          renderSubCategories(currentParent, true);
-        } else {
-          renderShowcase(true, lastCategorySlug);
-        }
-      });
+      backGallery.addEventListener('click', handleBack);
+      backGallerySticky.addEventListener('click', handleBack);
 
       // ── LEVEL 3: GALLERY ──
       function openGallery(cat, replace) {
