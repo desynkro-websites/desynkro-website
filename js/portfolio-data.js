@@ -370,10 +370,10 @@ const portfolioData = [
     ]
   },
   {
-    slug: 'codeberg',
+    slug: 'coding',
     title: 'Coding',
     desc: 'Open-source projects hosted on Codeberg. Web experiments, tools, and things I build for fun.',
-    type: 'codeberg',
+    type: 'coding',
     thumb: '/portfolio/projects/project_thumbnail.webp',
     items: [
       {

@@ -45,7 +45,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=20260620.1">
 </head>
 <body>
 
@@ -261,13 +261,13 @@
       }
 
       // ── PILLS ──
-      const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥', codeberg: '🔷' };
+      const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥', coding: '🔷' };
       portfolioData.forEach(cat => {
         const pill = document.createElement('button');
         pill.className = 'pf-pill';
         pill.textContent = (emojis[cat.slug] ? emojis[cat.slug] + ' ' : '') + cat.title;
         pill.addEventListener('click', () => {
-          if (cat.type === 'codeberg') {
+          if (cat.type === 'coding') {
             renderCodebergProjects(cat);
           } else if (cat.items && cat.items.length && cat.type) {
             openGallery(cat);
@@ -283,7 +283,7 @@
         videos:      { accent: '#d400ff', g1: '#180018', g2: '#2B0020', g3: '#200040' },
         animations:  { accent: '#00ff88', g1: '#001810', g2: '#002B1a', g3: '#002010' },
         websites:    { accent: '#ff8800', g1: '#181000', g2: '#2B1a00', g3: '#201000' },
-        codeberg:    { accent: '#2185D0', g1: '#001218', g2: '#002040', g3: '#0B3049' },
+        coding:     { accent: '#2185D0', g1: '#001218', g2: '#002040', g3: '#0B3049' },
       };
 
       function showCatHero(cat) {
@@ -337,7 +337,7 @@
           const label = cat.type === 'animation' ? 'ANIMATIONS'
             : cat.type === 'video' ? 'VIDEOS'
             : cat.type === 'website' ? 'SITES'
-            : cat.type === 'codeberg' ? 'PROJECTS'
+            : cat.type === 'coding' ? 'PROJECTS'
             : 'PROJECTS';
           const thumb = cat.thumb || '';
           const desc = cat.desc || `${total} ${label}`;
@@ -345,7 +345,7 @@
           const countLabel = cat.type === 'animation' ? 'ANIMATIONS'
             : cat.type === 'video' ? 'VIDEOS'
             : cat.type === 'website' ? 'WEBSITES'
-            : cat.type === 'codeberg' ? 'PROJECTS'
+            : cat.type === 'coding' ? 'PROJECTS'
             : cat.slug === 'videos' ? 'VIDEOS'
             : 'PHOTOS';
 
@@ -369,7 +369,7 @@
           el.addEventListener('click', () => {
               const cat = portfolioData.find(c => c.slug === el.dataset.slug);
               if (!cat) return;
-              if (cat.type === 'codeberg') {
+              if (cat.type === 'coding') {
                 renderCodebergProjects(cat);
               } else if (cat.items && cat.items.length && cat.type) {
                 openGallery(cat);
@@ -566,7 +566,7 @@
         backGallery.innerHTML = '<span class="pf-back-arr">&#8592;</span><span class="pf-back-lbl">BACK</span>';
         backGallerySticky.innerHTML = '<span class="pf-back-arr">&#8592;</span><span class="pf-back-lbl">BACK</span>';
 
-        galleryGrid.className = 'pf-grid pf-grid--codeberg';
+        galleryGrid.className = 'pf-grid pf-grid--coding';
 
         const items = cat.items || [];
         if (!items.length) {
@@ -578,13 +578,13 @@
         galleryGrid.innerHTML = items.map((item, i) => {
           const desc = item.desc || '';
           return `
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pf-codeberg-cell" data-index="${i}">
-              <div class="pf-codeberg-card">
-                <div class="pf-codeberg-name">${item.name}</div>
-                ${desc ? `<div class="pf-codeberg-desc">${desc}</div>` : ''}
-                <div class="pf-codeberg-meta">
-                  ${item.lang ? `<span class="pf-codeberg-lang"><span class="pf-codeberg-dot" style="background:${langColor(item.lang)}"></span>${item.lang}</span>` : ''}
-                  <span class="pf-codeberg-stars">&#9733; ${item.stars}</span>
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pf-coding-cell" data-index="${i}">
+              <div class="pf-coding-card">
+                <div class="pf-coding-name">${item.name}</div>
+                ${desc ? `<div class="pf-coding-desc">${desc}</div>` : ''}
+                <div class="pf-coding-meta">
+                  ${item.lang ? `<span class="pf-coding-lang"><span class="pf-coding-dot" style="background:${langColor(item.lang)}"></span>${item.lang}</span>` : ''}
+                  <span class="pf-coding-stars">&#9733; ${item.stars}</span>
                 </div>
               </div>
             </a>
@@ -592,7 +592,7 @@
         }).join('');
 
         requestAnimationFrame(() => {
-          galleryGrid.querySelectorAll('.pf-codeberg-cell').forEach((el, i) => {
+          galleryGrid.querySelectorAll('.pf-coding-cell').forEach((el, i) => {
             setTimeout(() => el.classList.add('show'), i * 40);
           });
         });
@@ -906,7 +906,7 @@
         }
 
         // Top-level category
-        if (cat.type === 'codeberg') {
+        if (cat.type === 'coding') {
           renderCodebergProjects(cat, replace);
         } else if (cat.items && cat.items.length) {
           openGallery(cat, replace);

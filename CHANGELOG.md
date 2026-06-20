@@ -1,5 +1,9 @@
 # Changelog
 
+## v20260620.1
+- Renamed internal `codeberg` references to `coding` across portfolio-data.js, portfolio.html, and styles.css for consistency with the Coding category title
+- Added cache-busting query parameter (`v=20260620.1`) to CSS links in both HTML files
+
 ## v20260620
 - Added Codeberg social links (dropdown, mobile, footer)
 - Added Coding portfolio category with manual project entries
