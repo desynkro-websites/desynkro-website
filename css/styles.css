@@ -310,6 +310,12 @@
       color: #5865F2;
     }
 
+    .mobile-social-icons a.cb:hover {
+      background: rgba(33,133,208,0.15);
+      border-color: #2185D0;
+      color: #2185D0;
+    }
+
     /* ═══════════════════════════════════════════════
        HERO SECTION
     ═══════════════════════════════════════════════ */
@@ -1450,6 +1456,13 @@
       border-color: #5865F2;
       color: #5865F2;
       box-shadow: 0 0 20px rgba(88,101,242,0.15);
+    }
+
+    .social-icon.cb:hover {
+      background: rgba(33,133,208,0.15);
+      border-color: #2185D0;
+      color: #2185D0;
+      box-shadow: 0 0 20px rgba(33,133,208,0.15);
     }
 
     .support-btns {
