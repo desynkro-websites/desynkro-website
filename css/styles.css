@@ -2065,6 +2065,82 @@
       text-overflow: ellipsis;
     }
 
+    .pf-grid--codeberg {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1100px;
+    }
+    .pf-codeberg-cell {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.35s cubic-bezier(.22,1,.36,1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .pf-codeberg-cell.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pf-codeberg-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .pf-codeberg-cell:hover .pf-codeberg-card {
+      border-color: rgba(33,133,208,0.2);
+      background: rgba(33,133,208,0.05);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .pf-codeberg-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2185D0;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .pf-codeberg-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .pf-codeberg-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+    .pf-codeberg-lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .pf-codeberg-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .pf-codeberg-stars {
+      color: rgba(255,255,255,0.4);
+    }
+    .pf-loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      color: rgba(255,255,255,0.4);
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
     /* ── YOUTUBE CTA ── */
     .pf-yt-cta {
       text-align: center;
@@ -2283,6 +2359,7 @@
       .pf-grid { grid-template-columns: repeat(4, 1fr); }
       .pf-grid--wide { grid-template-columns: repeat(2, 1fr); }
       .pf-grid--narrow { grid-template-columns: repeat(3, 1fr); }
+      .pf-grid--codeberg { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 700px) {
       .pf-main { padding: 0 20px 0; }
@@ -2298,6 +2375,7 @@
       .pf-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
       .pf-grid--wide { grid-template-columns: repeat(2, 1fr); }
       .pf-grid--narrow { grid-template-columns: repeat(2, 1fr); }
+      .pf-grid--codeberg { grid-template-columns: repeat(2, 1fr); }
       .pf-grid-label { font-size: 11px; padding-top: 4px; }
       .pf-level-title { font-size: 18px; letter-spacing: 2px; }
       .pf-lightbox-arrow { width: 36px; height: 36px; font-size: 20px; }
@@ -2314,6 +2392,7 @@
       .pf-grid { grid-template-columns: repeat(2, 1fr); }
       .pf-grid--wide { grid-template-columns: 1fr; }
       .pf-grid--narrow { grid-template-columns: repeat(2, 1fr); }
+      .pf-grid--codeberg { grid-template-columns: 1fr; }
       .pf-grid-label { font-size: 10px; }
       .pf-feature-visual { min-height: 160px; }
       .pf-pill { padding: 8px 18px; font-size: 12px; }

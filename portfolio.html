@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base href="/">
-  <title>Portfolio — DeSynkro</title>
+  <title>DeSynkro Portfolio</title>
   <meta name="description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
-  <meta property="og:title" content="Portfolio — DeSynkro">
+  <meta property="og:title" content="DeSynkro Portfolio">
   <meta property="og:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://desynkro.com/portfolio">
   <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portfolio — DeSynkro">
+  <meta name="twitter:title" content="DeSynkro Portfolio">
   <meta name="twitter:description" content="Explore DeSynkro's portfolio — photography, videos, websites, and animations.">
   <link rel="canonical" href="https://desynkro.com/portfolio">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -238,12 +238,14 @@
       portfolioData.forEach(cat => {
         const pill = document.createElement('button');
         pill.className = 'pf-pill';
-        const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥' };
+        const emojis = { photography: '📷', websites: '🌐', animations: '✨', videos: '🎥', codeberg: '🔷' };
         pill.textContent = (emojis[cat.slug] ? emojis[cat.slug] + ' ' : '') + cat.title;
         pill.addEventListener('click', () => {
           const existing = portfolioData.find(c => c.slug === cat.slug);
           if (!existing) return;
-          if (existing.items && existing.items.length && existing.type) {
+          if (existing.type === 'codeberg') {
+            renderCodebergProjects(existing);
+          } else if (existing.items && existing.items.length && existing.type) {
             openGallery(existing);
           } else if (existing.children && existing.children.length) {
             renderSubCategories(existing);
@@ -261,6 +263,7 @@
         videos:      { accent: '#d400ff', g1: '#180018', g2: '#2B0020', g3: '#200040' },
         animations:  { accent: '#00ff88', g1: '#001810', g2: '#002B1a', g3: '#002010' },
         websites:    { accent: '#ff8800', g1: '#181000', g2: '#2B1a00', g3: '#201000' },
+        codeberg:    { accent: '#2185D0', g1: '#001218', g2: '#002040', g3: '#0B3049' },
       };
 
       function showCatHero(cat) {
@@ -306,7 +309,7 @@
         hideCatHero();
         adjustMainPadding();
         pushState(null, 'Portfolio', '/portfolio', true);
-        document.title = 'Portfolio — DeSynkro';
+        document.title = 'DeSynkro Portfolio';
 
 
         showcase.innerHTML = portfolioData.map((cat, i) => {
@@ -314,6 +317,7 @@
           const label = cat.type === 'animation' ? 'ANIMATIONS'
             : cat.type === 'video' ? 'VIDEOS'
             : cat.type === 'website' ? 'SITES'
+            : cat.type === 'codeberg' ? 'PROJECTS'
             : 'PROJECTS';
           const thumb = cat.thumb || '';
           const desc = cat.desc || `${total} ${label}`;
@@ -321,8 +325,10 @@
           const countLabel = cat.type === 'animation' ? 'ANIMATIONS'
             : cat.type === 'video' ? 'VIDEOS'
             : cat.type === 'website' ? 'WEBSITES'
+            : cat.type === 'codeberg' ? 'PROJECTS'
             : cat.slug === 'videos' ? 'VIDEOS'
             : 'PHOTOS';
+
           return `
             <div class="pf-feature" data-slug="${cat.slug}">
               <div class="pf-feature-visual">
@@ -343,7 +349,9 @@
           el.addEventListener('click', () => {
               const cat = portfolioData.find(c => c.slug === el.dataset.slug);
               if (!cat) return;
-              if (cat.items && cat.items.length && cat.type) {
+              if (cat.type === 'codeberg') {
+                renderCodebergProjects(cat);
+              } else if (cat.items && cat.items.length && cat.type) {
                 openGallery(cat);
               } else if (cat.children && cat.children.length) {
                 renderSubCategories(cat);
@@ -352,8 +360,8 @@
         });
         if (scroll) {
           let target = null;
-          if (fromSlug === 'animations' || fromSlug === 'videos') {
-            target = showcase.querySelector('[data-slug="animations"]');
+          if (fromSlug) {
+            target = showcase.querySelector(`[data-slug="${fromSlug}"]`);
           }
           if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -515,6 +523,69 @@
             setTimeout(() => el.classList.add('show'), i * 40);
           });
         });
+        if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // ── CODEBERG PROJECTS ──
+      const langColors = {
+        JavaScript: '#f1e05a', TypeScript: '#3178c6', HTML: '#e34c26',
+        CSS: '#563d7c', Python: '#3572A5', Shell: '#89e051',
+        Dockerfile: '#384d54', PHP: '#4F5D95', Rust: '#dea584',
+        Go: '#00ADD8', Ruby: '#701516', Svelte: '#ff3e00',
+        Vue: '#41b883', Astro: '#ff5a03', Kotlin: '#A97BFF',
+        Java: '#b07219', C: '#555555', 'C++': '#f34b7d',
+        'C#': '#178600', Lua: '#000080', Swift: '#F05138',
+      };
+      function langColor(lang) { return langColors[lang] || '#6b7280'; }
+
+      function renderCodebergProjects(cat, replace) {
+        currentSub = cat;
+        currentParent = null;
+        lastCategorySlug = cat.slug;
+        levelStack = [];
+        if (pfStickyBar) pfStickyBar.classList.remove('visible');
+        browse.style.display = 'none';
+        subBrowse.style.display = 'none';
+        gallery.style.display = '';
+        showCatHero(cat);
+        adjustMainPadding();
+        const url = '/' + cat.slug;
+        pushState(cat.slug, cat.title, url, replace);
+        galleryTitle.textContent = '';
+        backGallery.innerHTML = '<span class="pf-back-arr">&#8592;</span><span class="pf-back-lbl">BACK</span>';
+        backGallerySticky.innerHTML = '<span class="pf-back-arr">&#8592;</span><span class="pf-back-lbl">BACK</span>';
+
+        galleryGrid.className = 'pf-grid pf-grid--codeberg';
+
+        const items = cat.items || [];
+        if (!items.length) {
+          galleryGrid.innerHTML = '<div class="pf-loading">No projects yet.</div>';
+          if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+
+        galleryGrid.innerHTML = items.map((item, i) => {
+          const desc = item.desc || '';
+          return `
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pf-codeberg-cell" data-index="${i}">
+              <div class="pf-codeberg-card">
+                <div class="pf-codeberg-name">${item.name}</div>
+                ${desc ? `<div class="pf-codeberg-desc">${desc}</div>` : ''}
+                <div class="pf-codeberg-meta">
+                  ${item.lang ? `<span class="pf-codeberg-lang"><span class="pf-codeberg-dot" style="background:${langColor(item.lang)}"></span>${item.lang}</span>` : ''}
+                  <span class="pf-codeberg-stars">&#9733; ${item.stars}</span>
+                </div>
+              </div>
+            </a>
+          `;
+        }).join('');
+
+        requestAnimationFrame(() => {
+          galleryGrid.querySelectorAll('.pf-codeberg-cell').forEach((el, i) => {
+            setTimeout(() => el.classList.add('show'), i * 40);
+          });
+        });
+
         if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
@@ -824,7 +895,9 @@
         }
 
         // Top-level category
-        if (cat.items && cat.items.length) {
+        if (cat.type === 'codeberg') {
+          renderCodebergProjects(cat, replace);
+        } else if (cat.items && cat.items.length) {
           openGallery(cat, replace);
         } else if (cat.children && cat.children.length) {
           levelStack = [];

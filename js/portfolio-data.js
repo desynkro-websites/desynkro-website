@@ -2,7 +2,7 @@ const portfolioData = [
   {
     slug: 'photography',
     title: 'Photography',
-    desc: 'Professional photographer from 2016–2020. A curated collection spanning those years — paused by circumstance, preserved in frame.',
+    desc: 'Professional photographer from 2016–2020. A curated collection spanning those years, paused by circumstance, preserved in frame.',
     thumb: '/portfolio/photography/photography-hero.jpg',
     children: [
       {
@@ -366,6 +366,29 @@ const portfolioData = [
           { thumb: 'https://img.youtube.com/vi/fmb9TEheQK8/maxresdefault.jpg', title: 'Mario VS Negative Mario', videoId: 'fmb9TEheQK8' },
           { thumb: 'https://img.youtube.com/vi/5u9nbeL0T2c/maxresdefault.jpg', title: 'Mario Sprite Video', videoId: '5u9nbeL0T2c' },
         ]
+      }
+    ]
+  },
+  {
+    slug: 'codeberg',
+    title: 'Coding',
+    desc: 'Open-source projects hosted on Codeberg. Web experiments, tools, and things I build for fun.',
+    type: 'codeberg',
+    thumb: '/portfolio/projects/project_thumbnail.webp',
+    items: [
+      {
+        name: 'discord-notification-scheduler',
+        desc: 'Schedule and manage Discord notifications with ease.',
+        lang: 'JavaScript',
+        stars: 0,
+        url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
+      },
+      {
+        name: 'exeldro-website',
+        desc: 'Personal website for Exeldro, a clean and modern web presence.',
+        lang: 'HTML',
+        stars: 0,
+        url: 'https://codeberg.org/DeSynkro/exeldro-website'
       }
     ]
   }
