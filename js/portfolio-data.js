@@ -377,6 +377,12 @@ const portfolioData = [
     thumb: '/portfolio/projects/project_thumbnail.webp',
     items: [
       {
+        name: 'open-converter',
+        desc: 'Self-hosted, fully offline media converter with a WebUI.',
+        lang: 'Python',
+        url: 'https://codeberg.org/DeSynkro/open-converter'
+      },
+      {
         name: 'desynkro-website',
         desc: 'Personal portfolio website: photography, videos, web development, and open-source projects.',
         lang: 'HTML',

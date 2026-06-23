@@ -1,5 +1,8 @@
 # Changelog
 
+## v20260623
+- Added open-converter to Coding portfolio category
+
 ## v20260620.2
 - Added desynkro-website to Coding portfolio category
 - Removed exeldro-website from Coding portfolio category
