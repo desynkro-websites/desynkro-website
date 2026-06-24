@@ -285,6 +285,7 @@ const portfolioData = [
     thumb: '/portfolio/websites/designs/wci-dig-thumb.png',
     items: [
       { thumb: '/portfolio/websites/designs/wci-dig-thumb.png', title: 'WCI-DIG', url: 'https://wci-dig.com', src: '/portfolio/websites/wci-dig.mp4' },
+      { thumb: '/portfolio/websites/designs/rcelectrics-thumb.png', title: 'RC Electrical', url: 'https://rcelectrical.net', src: '/portfolio/websites/rcelectrical.mp4' },
     ]
   },
   {

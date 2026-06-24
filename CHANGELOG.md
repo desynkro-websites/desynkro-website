@@ -1,5 +1,8 @@
 # Changelog
 
+## v20260624
+- Added RC Electrical website to Websites portfolio
+
 ## v20260623
 - Added open-converter to Coding portfolio category
 
