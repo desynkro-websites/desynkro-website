@@ -1,5 +1,9 @@
 # Changelog
 
+## v20261006
+- Updated "Get To Know Me" Text.
+- Added my-fav-cachy-pkgs to Coding portfolio category
+
 ## v20260624
 - Added RC Electrical website to Websites portfolio
 

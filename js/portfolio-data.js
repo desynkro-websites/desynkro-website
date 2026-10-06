@@ -394,6 +394,12 @@ const portfolioData = [
         desc: 'Schedule and manage Discord notifications with ease.',
         lang: 'Python',
         url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
+      },
+      {
+        name: 'my-fav-cachy-pkgs',
+        desc: 'A simple script to help me quickly install my favorite packages on any CachyOS machine.',
+        lang: 'Shell',
+        url: 'https://codeberg.org/DeSynkro/my-fav-cachy-pkgs'
       }
     ]
   }
