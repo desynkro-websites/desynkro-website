@@ -378,6 +378,12 @@ const portfolioData = [
     thumb: '/portfolio/projects/project_thumbnail.webp',
     items: [
       {
+        name: 'quote-assistant',
+        desc: 'Offline estimating for earthmoving jobs. Truck loads, material and a rough price, worked out on site.',
+        lang: 'JavaScript',
+        url: 'https://codeberg.org/DeSynkro/quote-assistant'
+      },
+      {
         name: 'open-converter',
         desc: 'Self-hosted, fully offline media converter with a WebUI.',
         lang: 'Python',

@@ -1,5 +1,8 @@
 # Changelog
 
+## v20261026
+- Added quote-assistant to Coding portfolio category
+
 ## v20261006
 - Updated "Get To Know Me" Text.
 - Added my-fav-cachy-pkgs to Coding portfolio category
