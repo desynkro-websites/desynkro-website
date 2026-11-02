@@ -1,5 +1,9 @@
 # Changelog
 
+## v20261102
+- Reorganized Coding portfolio into sections
+- Added pipeweaver-smc-mixer, alpha-pals-also-drop-normal-loot, pals-drop-dog-coins, WCI-Website, and soder-burgers-website to Coding portfolio category
+
 ## v20261026
 - Added quote-assistant to Coding portfolio category
 

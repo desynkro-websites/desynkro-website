@@ -376,36 +376,86 @@ const portfolioData = [
     desc: 'Open-source projects hosted on Codeberg. Web experiments, tools, and things I build for fun.',
     type: 'coding',
     thumb: '/portfolio/projects/project_thumbnail.webp',
-    items: [
+    groups: [
       {
-        name: 'quote-assistant',
-        desc: 'Offline estimating for earthmoving jobs. Truck loads, material and a rough price, worked out on site.',
-        lang: 'JavaScript',
-        url: 'https://codeberg.org/DeSynkro/quote-assistant'
+        title: 'Favorite Projects',
+        items: [
+          {
+            name: 'pipeweaver-smc-mixer',
+            desc: 'SMC mixer utilities for PipeWire.',
+            lang: 'Rust',
+            url: 'https://codeberg.org/DeSynkro/pipeweaver-smc-mixer'
+          },
+          {
+            name: 'quote-assistant',
+            desc: 'Offline estimating for earthmoving jobs. Truck loads, material and a rough price, worked out on site.',
+            lang: 'JavaScript',
+            url: 'https://codeberg.org/DeSynkro/quote-assistant'
+          }
+        ]
       },
       {
-        name: 'open-converter',
-        desc: 'Self-hosted, fully offline media converter with a WebUI.',
-        lang: 'Python',
-        url: 'https://codeberg.org/DeSynkro/open-converter'
+        title: 'Websites',
+        items: [
+          {
+            name: 'desynkro-website',
+            desc: 'Personal portfolio website: photography, videos, web development, and open-source projects.',
+            lang: 'HTML',
+            url: 'https://codeberg.org/DeSynkro/desynkro-website'
+          },
+          {
+            name: 'WCI-Website',
+            desc: 'Website for WCI-DIG.',
+            lang: 'HTML',
+            url: 'https://codeberg.org/DeSynkro/WCI-Website'
+          },
+          {
+            name: 'soder-burgers-website',
+            desc: 'Website for Söder Burgers.',
+            lang: 'HTML',
+            url: 'https://codeberg.org/DeSynkro/soder-burgers-website'
+          }
+        ]
       },
       {
-        name: 'desynkro-website',
-        desc: 'Personal portfolio website: photography, videos, web development, and open-source projects.',
-        lang: 'HTML',
-        url: 'https://codeberg.org/DeSynkro/desynkro-website'
+        title: 'Other Projects',
+        items: [
+          {
+            name: 'open-converter',
+            desc: 'Self-hosted, fully offline media converter with a WebUI.',
+            lang: 'Python',
+            url: 'https://codeberg.org/DeSynkro/open-converter'
+          },
+          {
+            name: 'discord-notification-scheduler',
+            desc: 'Schedule and manage Discord notifications with ease.',
+            lang: 'Python',
+            url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
+          },
+          {
+            name: 'my-fav-cachy-pkgs',
+            desc: 'A simple script to help me quickly install my favorite packages on any CachyOS machine.',
+            lang: 'Shell',
+            url: 'https://codeberg.org/DeSynkro/my-fav-cachy-pkgs'
+          }
+        ]
       },
       {
-        name: 'discord-notification-scheduler',
-        desc: 'Schedule and manage Discord notifications with ease.',
-        lang: 'Python',
-        url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
-      },
-      {
-        name: 'my-fav-cachy-pkgs',
-        desc: 'A simple script to help me quickly install my favorite packages on any CachyOS machine.',
-        lang: 'Shell',
-        url: 'https://codeberg.org/DeSynkro/my-fav-cachy-pkgs'
+        title: 'Game Mods',
+        items: [
+          {
+            name: 'alpha-pals-also-drop-normal-loot',
+            desc: 'Palworld mod that makes Alpha Pals also drop normal loot.',
+            game: 'Palworld',
+            url: 'https://codeberg.org/DeSynkro/alpha-pals-also-drop-normal-loot'
+          },
+          {
+            name: 'pals-drop-dog-coins',
+            desc: 'Palworld mod that makes Pals drop dog coins.',
+            game: 'Palworld',
+            url: 'https://codeberg.org/DeSynkro/pals-drop-dog-coins'
+          }
+        ]
       }
     ]
   }

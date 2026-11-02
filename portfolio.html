@@ -45,7 +45,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css?v=20261026">
+  <link rel="stylesheet" href="/css/styles.css?v=20261102">
 </head>
 <body>
 
@@ -546,6 +546,7 @@
         Vue: '#41b883', Astro: '#ff5a03', Kotlin: '#A97BFF',
         Java: '#b07219', C: '#555555', 'C++': '#f34b7d',
         'C#': '#178600', Lua: '#000080', Swift: '#F05138',
+        Palworld: '#f59e0b',
       };
       function langColor(lang) { return langColors[lang] || '#6b7280'; }
 
@@ -568,27 +569,44 @@
 
         galleryGrid.className = 'pf-grid pf-grid--coding';
 
-        const items = cat.items || [];
-        if (!items.length) {
+        const groups = cat.groups || (cat.items ? [{ title: '', items: cat.items }] : []);
+        const hasItems = groups.some(g => g.items && g.items.length);
+        if (!hasItems) {
           galleryGrid.innerHTML = '<div class="pf-loading">No projects yet.</div>';
           if (pfMain) pfMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
           return;
         }
 
-        galleryGrid.innerHTML = items.map((item, i) => {
-          const desc = item.desc || '';
-          return `
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pf-coding-cell" data-index="${i}">
-              <div class="pf-coding-card">
-                <div class="pf-coding-name">${item.name}</div>
-                ${desc ? `<div class="pf-coding-desc">${desc}</div>` : ''}
-                <div class="pf-coding-meta">
-                  ${item.lang ? `<span class="pf-coding-lang"><span class="pf-coding-dot" style="background:${langColor(item.lang)}"></span>${item.lang}</span>` : ''}
-                </div>
-              </div>
-            </a>
-          `;
-        }).join('');
+        galleryGrid.innerHTML = `
+          <div class="pf-coding-groups">
+            ${groups.map((group, gi) => {
+              const items = group.items || [];
+              if (!items.length) return '';
+              return `
+                <section class="pf-coding-group">
+                  ${group.title ? `<h3 class="pf-coding-group-title">${group.title}</h3>` : ''}
+                  <div class="pf-coding-group-grid">
+                    ${items.map((item, i) => {
+                      const desc = item.desc || '';
+                      const metaLabel = item.game || item.lang;
+                      return `
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pf-coding-cell" data-group="${gi}" data-index="${i}">
+                          <div class="pf-coding-card">
+                            <div class="pf-coding-name">${item.name}</div>
+                            ${desc ? `<div class="pf-coding-desc">${desc}</div>` : ''}
+                            <div class="pf-coding-meta">
+                              ${metaLabel ? `<span class="pf-coding-lang"><span class="pf-coding-dot" style="background:${langColor(metaLabel)}"></span>${metaLabel}</span>` : ''}
+                            </div>
+                          </div>
+                        </a>
+                      `;
+                    }).join('')}
+                  </div>
+                </section>
+              `;
+            }).join('')}
+          </div>
+        `;
 
         requestAnimationFrame(() => {
           galleryGrid.querySelectorAll('.pf-coding-cell').forEach((el, i) => {
