@@ -41,6 +41,9 @@ Open [http://localhost:8081](http://localhost:8081)
 ├── index.html               Home page (about, services, contact, carousel)
 ├── portfolio.html           Portfolio gallery with categories
 ├── docker-compose.yml       Nginx setup
+├── nginx.conf               Nginx config (caching, compression, security)
+├── robots.txt               Crawler rules (search allowed, AI training blocked)
+├── sitemap.xml              Search engine sitemap
 ├── CHANGELOG.md             Version history
 ├── css/
 │   └── styles.css           All styles

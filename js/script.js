@@ -469,8 +469,10 @@ document.addEventListener('DOMContentLoaded', () => {
   (function() {
     const canvas = document.getElementById('heroCanvas');
     if (!canvas) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = canvas.getContext('2d');
     let w, h, particles = [];
+    let rafId = null;
 
     function resize() {
       const hero = canvas.closest('.hero');
@@ -509,9 +511,20 @@ document.addEventListener('DOMContentLoaded', () => {
     function animate() {
       ctx.clearRect(0, 0, w, h);
       particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     }
-    animate();
+
+    function start() {
+      if (rafId === null) rafId = requestAnimationFrame(animate);
+    }
+    function stop() {
+      if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stop() : start();
+    });
+    start();
   })();
 
   // ── COPYRIGHT YEAR ──

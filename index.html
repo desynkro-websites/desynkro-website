@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#001218">
   <base href="/">
   <title>DeSynkro</title>
   <meta name="description" content="DeSynkro - Jack of all trades! Photographer, web developer, video editor, linux advocate and former content creator.">
@@ -10,10 +11,16 @@
   <meta property="og:description" content="Jack of all trades, master of some. Linux gaming, photography, web development, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://desynkro.com">
+  <meta property="og:site_name" content="DeSynkro">
+  <meta property="og:locale" content="en_AU">
   <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DeSynkro portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DeSynkro - Photographer, Web Developer and Linux Advocate">
   <meta name="twitter:description" content="Jack of all trades, master of some. Linux gaming, photography, web development, and more.">
+  <meta name="twitter:image" content="https://desynkro.com/images/og-image.jpg">
   <link rel="canonical" href="https://desynkro.com">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/favicon-32.png">
@@ -23,17 +30,21 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://desynkro.com/#person",
     "name": "Iago Rosa",
     "alternateName": "DeSynkro",
     "url": "https://desynkro.com",
     "image": "https://desynkro.com/images/hero/pfp.webp",
     "jobTitle": ["Web Developer", "Photographer", "Video Editor", "Content Creator"],
     "description": "Photographer, web developer, and Linux advocate based in Australia.",
+    "knowsAbout": ["Linux", "Web Development", "Photography", "Video Editing", "Self-Hosting", "Cybersecurity"],
     "sameAs": [
       "https://codeberg.org/DeSynkro",
-      "https://steamcommunity.com/id/desynkro",
+      "https://github.com/DeSynkro",
       "https://www.youtube.com/@DeSynkro",
-      "https://github.com/DeSynkro"
+      "https://www.twitch.tv/DeSynkro",
+      "https://ko-fi.com/desynkro",
+      "https://steamcommunity.com/id/desynkro"
     ]
   }
   </script>
@@ -42,12 +53,16 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://desynkro.com/#website",
     "name": "DeSynkro",
-    "url": "https://desynkro.com"
+    "url": "https://desynkro.com",
+    "inLanguage": "en-AU",
+    "publisher": { "@id": "https://desynkro.com/#person" }
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css?v=20261102">
+  <link rel="preload" href="/fonts/couture/COUTUREBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261104">
 </head>
 <body>
 
@@ -109,7 +124,7 @@
     <div class="hero-content">
       <picture>
         <source srcset="/images/hero/pfp.webp" type="image/webp">
-        <img src="/images/hero/pfp.jpg" alt="DeSynkro profile picture" class="hero-pfp">
+        <img src="/images/hero/pfp.jpg" alt="DeSynkro profile picture" class="hero-pfp" width="160" height="160" fetchpriority="high" decoding="async">
       </picture>
       <h1 class="hero-title">DESYNKRO</h1>
       <div class="hero-sub">JACK OF ALL TRADES, MASTER OF SOME</div>
@@ -392,6 +407,6 @@
   </div>
 
   <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
-  <script src="/js/script.js"></script>
+  <script src="/js/script.js?v=20261104"></script>
 </body>
 </html>

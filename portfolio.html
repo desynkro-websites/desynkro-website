@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#001218">
   <base href="/">
   <title>DeSynkro Portfolio</title>
   <meta name="description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
@@ -10,10 +11,16 @@
   <meta property="og:description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://desynkro.com/portfolio">
+  <meta property="og:site_name" content="DeSynkro">
+  <meta property="og:locale" content="en_AU">
   <meta property="og:image" content="https://desynkro.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DeSynkro portfolio preview">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DeSynkro Portfolio">
   <meta name="twitter:description" content="Explore DeSynkro's portfolio: photography, videos, websites, and animations.">
+  <meta name="twitter:image" content="https://desynkro.com/images/og-image.jpg">
   <link rel="canonical" href="https://desynkro.com/portfolio">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logos/favicon-32.png">
@@ -23,18 +30,25 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://desynkro.com/#website",
     "name": "DeSynkro",
-    "url": "https://desynkro.com"
+    "url": "https://desynkro.com",
+    "inLanguage": "en-AU",
+    "publisher": { "@id": "https://desynkro.com/#person" }
   }
   </script>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "CollectionPage",
+    "@id": "https://desynkro.com/portfolio#webpage",
     "name": "DeSynkro Portfolio",
     "description": "Explore DeSynkro's portfolio: photography, videos, websites, and animations.",
     "url": "https://desynkro.com/portfolio",
+    "inLanguage": "en-AU",
+    "isPartOf": { "@id": "https://desynkro.com/#website" },
+    "author": { "@id": "https://desynkro.com/#person" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -45,7 +59,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css?v=20261102">
+  <link rel="preload" href="/fonts/couture/COUTUREBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=20261104">
 </head>
 <body>
 
@@ -221,7 +236,7 @@
   </footer>
 
   <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
-  <script src="/js/portfolio-data.js"></script>
+  <script src="/js/portfolio-data.js?v=20261104"></script>
   <script>
     (function() {
       // ── REFS ──
@@ -256,6 +271,7 @@
       function countItems(cat) {
         if (cat.items) return cat.items.length;
         if (cat.images) return cat.images.length;
+        if (cat.groups) return cat.groups.reduce((s, g) => s + (g.items ? g.items.length : 0), 0);
         if (cat.children) return cat.children.reduce((s, c) => s + countItems(c), 0);
         return 0;
       }
@@ -514,7 +530,7 @@
           return `
             <div class="pf-grid-cell" data-index="${i}">
               <div class="pf-grid-item${wideClass}">
-                <img src="${thumb}" alt="${cat.title}" loading="lazy">
+                <img src="${thumb}" alt="${cat.title}" loading="lazy" decoding="async">
                 ${playOverlay}
               </div>
               ${label ? `<span class="pf-grid-label">${label}</span>` : ''}
@@ -654,7 +670,7 @@
           if (!frame) {
             frame = document.createElement('iframe');
             frame.className = 'pf-lb-frame';
-            frame.allow = 'autoplay; encrypted-media';
+            frame.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
             frame.allowFullscreen = true;
             lb.querySelector('.pf-lightbox-view').prepend(frame);
           }
@@ -944,6 +960,6 @@
       navigateFromURL(true);
     })();
   </script>
-  <script src="/js/script.js"></script>
+  <script src="/js/script.js?v=20261104"></script>
 </body>
 </html>

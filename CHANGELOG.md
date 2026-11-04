@@ -1,5 +1,15 @@
 # Changelog
 
+## v20261104
+- Fixed Coding category showing 0 projects after grouping
+- Fixed cache busting: versioned CSS and JS, HTML now revalidates instead of being cached
+- Added gzip compression, security headers, and repo-internal file blocking to nginx
+- Added robots.txt, sitemap.xml, and .well-known/security.txt
+- Added Open Graph and Twitter meta improvements (site_name, locale, image dimensions, twitter:image)
+- Added Schema.org @id links, knowsAbout, and CollectionPage on portfolio
+- Preloaded the heading font and added fetchpriority to the hero image
+- Paused hero particle animation when the tab is hidden and respect reduced motion
+
 ## v20261102
 - Reorganized Coding portfolio into sections
 - Added pipeweaver-smc-mixer, alpha-pals-also-drop-normal-loot, pals-drop-dog-coins, WCI-Website, and soder-burgers-website to Coding portfolio category
