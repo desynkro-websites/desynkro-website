@@ -381,6 +381,12 @@ const portfolioData = [
         title: 'Favorite Projects',
         items: [
           {
+            name: 'tunnel-to-my-dash',
+            desc: 'Open your home dashboard from anywhere without switching your VPN.',
+            lang: 'TypeScript',
+            url: 'https://codeberg.org/DeSynkro/tunnel-to-my-dash'
+          },
+          {
             name: 'pipeweaver-smc-mixer',
             desc: 'SMC mixer utilities for PipeWire.',
             lang: 'Rust',

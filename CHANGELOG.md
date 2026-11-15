@@ -1,5 +1,8 @@
 # Changelog
 
+## v20261115
+- Added tunnel-to-my-dash to Favorite Projects
+
 ## v20261104
 - Fixed Coding category showing 0 projects after grouping
 - Fixed cache busting: versioned CSS and JS, HTML now revalidates instead of being cached
