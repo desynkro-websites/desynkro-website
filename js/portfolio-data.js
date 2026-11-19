@@ -373,7 +373,7 @@ const portfolioData = [
   {
     slug: 'coding',
     title: 'Coding',
-    desc: 'Open-source projects hosted on Codeberg. Web experiments, tools, and things I build for fun.',
+    desc: 'Open-source projects hosted on GitHub. Web experiments, tools, and things I build for fun.',
     type: 'coding',
     thumb: '/portfolio/projects/project_thumbnail.webp',
     groups: [
@@ -381,45 +381,28 @@ const portfolioData = [
         title: 'Favorite Projects',
         items: [
           {
+            name: 'lan-party',
+            desc: 'A LAN cable across the internet. One port. Your friends. Nothing else.',
+            lang: 'Go',
+            url: 'https://github.com/DeSynkro/lan-party'
+          },
+          {
             name: 'tunnel-to-my-dash',
             desc: 'Open your home dashboard from anywhere without switching your VPN.',
             lang: 'TypeScript',
-            url: 'https://codeberg.org/DeSynkro/tunnel-to-my-dash'
+            url: 'https://github.com/DeSynkro/tunnel-to-my-dash'
           },
           {
             name: 'pipeweaver-smc-mixer',
-            desc: 'SMC mixer utilities for PipeWire.',
+            desc: 'A dedicated control surface for the M-VAVE SMC-Mixer and Pipeweaver.',
             lang: 'Rust',
-            url: 'https://codeberg.org/DeSynkro/pipeweaver-smc-mixer'
+            url: 'https://github.com/DeSynkro/pipeweaver-smc-mixer'
           },
           {
             name: 'quote-assistant',
             desc: 'Offline estimating for earthmoving jobs. Truck loads, material and a rough price, worked out on site.',
             lang: 'JavaScript',
-            url: 'https://codeberg.org/DeSynkro/quote-assistant'
-          }
-        ]
-      },
-      {
-        title: 'Websites',
-        items: [
-          {
-            name: 'desynkro-website',
-            desc: 'Personal portfolio website: photography, videos, web development, and open-source projects.',
-            lang: 'HTML',
-            url: 'https://codeberg.org/DeSynkro/desynkro-website'
-          },
-          {
-            name: 'WCI-Website',
-            desc: 'Website for WCI-DIG.',
-            lang: 'HTML',
-            url: 'https://codeberg.org/DeSynkro/WCI-Website'
-          },
-          {
-            name: 'soder-burgers-website',
-            desc: 'Website for Söder Burgers.',
-            lang: 'HTML',
-            url: 'https://codeberg.org/DeSynkro/soder-burgers-website'
+            url: 'https://github.com/DeSynkro/quote-assistant'
           }
         ]
       },
@@ -430,36 +413,49 @@ const portfolioData = [
             name: 'open-converter',
             desc: 'Self-hosted, fully offline media converter with a WebUI.',
             lang: 'Python',
-            url: 'https://codeberg.org/DeSynkro/open-converter'
+            url: 'https://github.com/DeSynkro/open-converter'
           },
           {
             name: 'discord-notification-scheduler',
-            desc: 'Schedule and manage Discord notifications with ease.',
+            desc: 'Schedule messages to Discord webhooks on your terms.',
             lang: 'Python',
-            url: 'https://codeberg.org/DeSynkro/discord-notification-scheduler'
+            url: 'https://github.com/DeSynkro/discord-notification-scheduler'
           },
           {
             name: 'my-fav-cachy-pkgs',
             desc: 'A simple script to help me quickly install my favorite packages on any CachyOS machine.',
             lang: 'Shell',
-            url: 'https://codeberg.org/DeSynkro/my-fav-cachy-pkgs'
+            url: 'https://github.com/DeSynkro/my-fav-cachy-pkgs'
+          },
+          {
+            name: 'opencode-plugin-switch',
+            desc: 'Turn OpenCode plugins and skills on and off. One terminal screen, no files deleted, nothing to remember.',
+            lang: 'TypeScript',
+            url: 'https://github.com/DeSynkro/opencode-plugin-switch'
           }
         ]
       },
       {
-        title: 'Game Mods',
+        title: 'Games & Mods',
         items: [
+          {
+            name: 'rac-rs-features',
+            desc: 'Ratchet & Clank (PS2, 2002) on PC, from the beginning to the end credits, built from your own disc.',
+            lang: 'Rust',
+            game: 'Ratchet & Clank',
+            url: 'https://github.com/DeSynkro/rac-rs-features'
+          },
           {
             name: 'alpha-pals-also-drop-normal-loot',
             desc: 'Palworld mod that makes Alpha Pals also drop normal loot.',
             game: 'Palworld',
-            url: 'https://codeberg.org/DeSynkro/alpha-pals-also-drop-normal-loot'
+            url: 'https://github.com/DeSynkro/alpha-pals-also-drop-normal-loot'
           },
           {
             name: 'pals-drop-dog-coins',
             desc: 'Palworld mod that makes Pals drop dog coins.',
             game: 'Palworld',
-            url: 'https://codeberg.org/DeSynkro/pals-drop-dog-coins'
+            url: 'https://github.com/DeSynkro/pals-drop-dog-coins'
           }
         ]
       }

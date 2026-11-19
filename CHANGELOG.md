@@ -1,5 +1,12 @@
 # Changelog
 
+## v20261119.2
+- Migrated social links and GitHub-hosted project links from Codeberg to GitHub
+- Added lan-party, opencode-plugin-switch, and rac-rs-features to the Coding portfolio
+- Renamed the Game Mods group to Games & Mods
+- Restyled coding project cards to fit the site theme
+- Temporarily removed the Websites group until those repos are migrated to GitHub
+
 ## v20261119
 - Fixed hero title and subtitle overlapping on Windows by normalising Couture font metrics
 

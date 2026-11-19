@@ -15,7 +15,7 @@ I always open-source my work as a way to give back to the community, thank you t
 ## Quick start
 
 ```bash
-git clone https://codeberg.org/DeSynkro/desynkro-website.git
+git clone https://github.com/DeSynkro/desynkro-website.git
 cd desynkro-website
 docker compose up -d
 ```
@@ -25,14 +25,14 @@ Open [http://localhost:8081](http://localhost:8081)
 ## Screenshots
 
 <p align="center">
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/home_1.webp" target="_blank"><img src="screenshots/home_1.webp" width="32%" alt="Home page hero section"></a>
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/home_2.webp" target="_blank"><img src="screenshots/home_2.webp" width="32%" alt="Home page about carousel"></a>
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/home_3.webp" target="_blank"><img src="screenshots/home_3.webp" width="32%" alt="Home page contact and footer"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/home_1.webp" target="_blank"><img src="screenshots/home_1.webp" width="32%" alt="Home page hero section"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/home_2.webp" target="_blank"><img src="screenshots/home_2.webp" width="32%" alt="Home page about carousel"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/home_3.webp" target="_blank"><img src="screenshots/home_3.webp" width="32%" alt="Home page contact and footer"></a>
 </p>
 <p align="center">
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/portfolio_1.webp" target="_blank"><img src="screenshots/portfolio_1.webp" width="32%" alt="Portfolio showcase grid"></a>
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/portfolio_2.webp" target="_blank"><img src="screenshots/portfolio_2.webp" width="32%" alt="Portfolio category browsing"></a>
-  <a href="https://codeberg.org/DeSynkro/desynkro-website/raw/branch/main/screenshots/portfolio_3.webp" target="_blank"><img src="screenshots/portfolio_3.webp" width="32%" alt="Portfolio coding projects"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/portfolio_1.webp" target="_blank"><img src="screenshots/portfolio_1.webp" width="32%" alt="Portfolio showcase grid"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/portfolio_2.webp" target="_blank"><img src="screenshots/portfolio_2.webp" width="32%" alt="Portfolio category browsing"></a>
+  <a href="https://github.com/DeSynkro/desynkro-website/raw/main/screenshots/portfolio_3.webp" target="_blank"><img src="screenshots/portfolio_3.webp" width="32%" alt="Portfolio coding projects"></a>
 </p>
 
 ## Structure
