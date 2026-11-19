@@ -3,6 +3,14 @@
       font-weight: bold;
       font-style: normal;
       font-display: swap;
+      /* Normalise vertical metrics across platforms.
+         Couture's OS/2 win metrics (ascent 816 / descent 102) differ from its
+         hhea and typo metrics (714 / -286), and USE_TYPO_METRICS is not set.
+         Windows therefore positions the baseline differently to Linux/macOS,
+         which pulls the hero subtitle into the title at large sizes. */
+      ascent-override: 71.4%;
+      descent-override: 28.6%;
+      line-gap-override: 20%;
       src: url('/fonts/couture/COUTUREBold.woff2') format('woff2'),
            url('/fonts/couture/COUTUREBold.ttf') format('truetype');
     }

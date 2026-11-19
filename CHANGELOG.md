@@ -1,5 +1,8 @@
 # Changelog
 
+## v20261119
+- Fixed hero title and subtitle overlapping on Windows by normalising Couture font metrics
+
 ## v20261115
 - Added tunnel-to-my-dash to Favorite Projects
 
